@@ -8,7 +8,8 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon'
+      , type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
 
@@ -31,11 +32,7 @@ export default {
   ],
 
 
-  server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost,
-    timing: false
-  },
+
   database: {
     emulatorPort: process.env.NODE_ENV === 'development' ? 9000 : undefined,
     emulatorHost: 'localhost',
