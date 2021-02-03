@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <clipPath id="clip-path">
+            <circle id="Эллипс_50" cx="12" cy="12" r="12" class="cls-1" transform="translate(.802 .327)"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="Группа_масок_45" clip-path="url(#clip-path)" transform="translate(-.802 -.327)">
+        <g id="Сгруппировать_729" transform="translate(.476)">
+            <path id="Прямоугольник_433" d="M0 0H24V8H0z" class="cls-1" transform="translate(.327 .327)"/>
+            <path id="Прямоугольник_434" fill="#0039a6" d="M0 0H24V8H0z" transform="translate(.327 8.327)"/>
+            <path id="Прямоугольник_435" fill="#d52b1e" d="M0 0H24V8H0z" transform="translate(.327 16.327)"/>
+        </g>
+    </g>
+</svg>

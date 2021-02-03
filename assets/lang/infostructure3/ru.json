@@ -1,0 +1,16 @@
+{
+  "infrastructure3slide": {
+    "title":"Инфраструктура",
+    "subtitle": "Инвестиционная привлекательность",
+    "article": {
+      "chapter1":{
+        "title": "One Space Mobile",
+        "text": "<a class='link-help' href=''>Приложение</a> позволит пройти регистрацию в Системе Bitbon, управлять цифровыми активами, аттестатами, производить оплату по QR-коду и многое другое."
+      },
+      "chapter2":{
+        "title": "Bit Trade",
+        "text": "<a class='link-help' href=''>Сервис</a> по приобретению и обмену цифровых активов."
+      }
+    }
+  }
+}

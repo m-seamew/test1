@@ -1,0 +1,51 @@
+{
+  "potential": {
+    "title":"Потенциал блокчейна",
+    "subtitle": "Анализ и прогнозы рынка",
+    "chapter_1": {
+      "text": "Компании-гиганты применяющие технологию блокчейн"
+    },
+    "chapter_2": {
+      "text": "Государства лидеры в интеграции технологии блокчейн",
+      "contries": [
+         {
+          "header": "Китай",
+          "img": "potential/china.png"
+         },
+         {
+          "header": "США", 
+          "img": "potential/usa.png"
+         },
+         {
+          "header": "Сингапур",
+          "img": "potential/singapur.png"
+         },
+         {
+          "header": "Германия",
+          "img": "potential/germany.png"
+         },
+         {
+          "header": "Южная Корея",
+          "img": "potential/korea.png"
+         }
+        ]
+    },
+    "chapter_3": {
+      "text": "Крупнейшие фонды владеющие криптовалютой",
+      "fonds": [
+        {
+          "img": "potential/grayscale.png",
+          "text" : "547,08 ВТС и др. токены <br><span class='bold'>$22.6 млрд</span>"
+        },
+        {
+          "img": "potential/Rothschild.png",
+          "text" : "75,161 ВТС <br><span class='bold'>$2.6 млрд</span>"
+        },
+        {
+          "img": "potential/microstrategy.png",
+          "text" : "40,824 ВТС <br><span class='bold'>$1.4 млрд</span>"
+        }
+      ]
+    }
+  }
+}

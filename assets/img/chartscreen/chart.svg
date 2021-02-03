@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080.5" height="579" viewBox="0 0 1080.5 579">
+    <defs>
+        <style>
+            .cls-13,.cls-27,.cls-3{fill:#3d3d3d}.cls-3{font-size:22px}.cls-12,.cls-27,.cls-3{font-family:SegoeUI-Semibold,Segoe UI;font-weight:600}.cls-13{font-family:SegoeUI-Bold,Segoe UI;font-weight:700}.cls-5{fill:#fff;opacity:.3}.cls-10,.cls-25{fill:none;stroke:#707070}.cls-10{stroke-linecap:round;stroke-width:2px;opacity:.25;stroke-dasharray:2 8}.cls-12,.cls-19{fill:#7596e2}.cls-12{font-size:25px}.cls-13{font-size:18px;opacity:.6}.cls-27{font-size:14px}
+        </style>
+    </defs>
+    <g id="Сгруппировать_47" transform="translate(12649 -764.491)">
+        <g id="Сгруппировать_634">
+            <path id="Прямоугольник_12" fill="#f2f2f2" d="M0 0H1080V579H0z" transform="translate(-12649 764.491)"/>
+            <path id="Объединение_9" fill="#333" d="M132.362 258.654q-18.653-18.134-18.646-46.06t18.646-46.052Q151 148.4 179.57 148.391q28.767 0 47.4 18.054t18.63 46.149q0 28.107-18.638 46.156T179.57 276.8q-28.58 0-47.208-18.146zm19.482-75.27q-10.51 11.542-10.5 29.21 0 17.693 10.5 29.217 10.51 11.542 27.726 11.546t27.816-11.546q10.594-11.534 10.59-29.217t-10.59-29.21q-10.61-11.542-27.816-11.546-17.225.001-27.726 11.546zM570.7 274.57v-50.813l-48.631-73.314h30.656l31.412 49.867 31.039-49.867h30.645l-48.242 73.314v50.813zm-79.48 0l-7.755-21.029h-54.118L421.4 274.57h-30.657l48.821-124.127h33.683l48.631 124.127zm-54.49-44.289h39.352l-19.672-53.419zM266.424 274.57V150.443h49.768q29.707 0 48.348 17.121t18.636 45.03q0 27.928-18.546 44.942-18.538 17.041-48.438 17.035zm26.864-23.265h22.9q18.157 0 28.853-11.163t10.69-27.548q0-17.108-10.407-28.006t-29.136-10.882h-22.9zM36.891 274.57V173.706H0v-23.263h100.662v23.263H63.953V274.57zm358-181.465q-15.738-15.325-15.73-38.9t15.73-38.883Q410.636 0 434.76 0q24.281 0 40.029 15.243 15.722 15.251 15.73 38.966 0 23.739-15.73 38.969-15.742 15.247-40.029 15.241-24.135 0-39.866-15.314zm16.466-63.565q-8.868 9.747-8.868 24.669 0 14.939 8.868 24.669 8.868 9.751 23.4 9.751t23.493-9.751q8.932-9.732 8.942-24.669 0-14.919-8.942-24.669-8.959-9.732-23.493-9.738t-23.4 9.738zm212.41 74.955a12.379 12.379 0 0 1 0-17.909 12.9 12.9 0 0 1 18.226 0 12.379 12.379 0 0 1 0 17.909 12.9 12.9 0 0 1-18.226 0zM580 106.541l-50.807-68.35v68.35H506.5V1.734h23.324l49.366 65.841V1.734h22.692v104.807zm-301.652 0V1.734h56.087q14.536 0 22.6 7.778a25.308 25.308 0 0 1 8.065 18.925q0 9.6-5.267 16.034a22.172 22.172 0 0 1-13.1 8.014 22.326 22.326 0 0 1 14.537 8.641 26.655 26.655 0 0 1 5.915 17.131q0 12.259-8.149 20.267t-22.848 8.017zm22.692-19.334h29.233c4.265 0 7.612-1.069 10.074-3.219a11.207 11.207 0 0 0 3.675-8.875 11.637 11.637 0 0 0-3.675-8.724c-2.462-2.356-5.809-3.529-10.074-3.529h-29.234zm0-43.525h28.432q5.763 0 9.109-3.139a10.669 10.669 0 0 0 3.361-8.168 10.859 10.859 0 0 0-3.432-8.256 12.725 12.725 0 0 0-9.038-3.222h-28.433zm-91.074 62.858V21.37h-31.157V1.734h85V21.37h-31v85.172zm-55.971 0h-45.5V84.106h22.813V24.17h-22.814V1.734h45.5v82.372h22.813v22.436zM0 106.541V1.734h56.079q14.54 0 22.61 7.778a25.317 25.317 0 0 1 8.065 18.925q0 9.6-5.27 16.034a22.174 22.174 0 0 1-13.1 8.014 22.314 22.314 0 0 1 14.535 8.641 26.626 26.626 0 0 1 5.915 17.131q0 12.259-8.149 20.267t-22.848 8.017zm22.687-19.333H51.92c4.265 0 7.615-1.069 10.074-3.219a11.2 11.2 0 0 0 3.673-8.875 11.625 11.625 0 0 0-3.673-8.724c-2.459-2.356-5.809-3.529-10.074-3.529H22.687zm0-43.525h28.432c3.845 0 6.875-1.04 9.112-3.139a10.664 10.664 0 0 0 3.355-8.168 10.857 10.857 0 0 0-3.429-8.256 12.721 12.721 0 0 0-9.038-3.22H22.687z" opacity="0.02" transform="translate(-12432 909.991)"/>
+            <text id="_13_марта_2017" class="cls-3" transform="translate(-12616 1265.491)">
+                <tspan x="-44.317" y="24">13 марта</tspan><tspan x="-22.537" y="54">2017</tspan>
+            </text>
+            <text id="_13_марта_2018" class="cls-3" transform="translate(-12367 1265.491)">
+                <tspan x="-44.317" y="24">13 марта</tspan><tspan x="-22.747" y="54">2018</tspan>
+            </text>
+            <text id="_17_июня_2018" class="cls-3" transform="translate(-12116 1265.491)">
+                <tspan x="-41.637" y="24">17 июня</tspan><tspan x="-22.747" y="54">2018</tspan>
+            </text>
+            <text id="_9_октября_2018" fill="#3d3d3d" font-family="SegoeUI-Bold, Segoe UI" font-size="22px" font-weight="700" transform="translate(-11834 1265.491)">
+                <tspan x="-53.163" y="24">9 октября</tspan><tspan x="-25.309" y="54">2018</tspan>
+            </text>
+            <path id="Прямоугольник_13" d="M0 0H256V487H0z" class="cls-5" transform="translate(-12539 764.491)"/>
+            <path id="Прямоугольник_14" d="M0 0H254V487H0z" class="cls-5" transform="translate(-12028 764.491)"/>
+            <path id="Прямоугольник_186" fill="#ffff70" d="M0 0H204V487H0z" opacity="0.3" transform="translate(-11773 764.491)"/>
+            <text id="_20.8_млн" fill="#3d3d3d" font-family="SegoeUI, Segoe UI" font-size="30px" transform="translate(-12320 1094.491)">
+                <tspan x="-35.596" y="32">$20.8</tspan><tspan x="-27.092" y="56">млн</tspan>
+            </text>
+            <text id="_52.4_млн" fill="#3d3d3d" font-family="SegoeUI-Semibold, Segoe UI" font-size="30px" font-weight="600" transform="translate(-12076 961.491)">
+                <tspan x="-37.244" y="32">$52.4</tspan><tspan x="-28.345" y="56">млн</tspan>
+            </text>
+            <text id="_88.4_млн" fill="#399a1d" font-family="SegoeUI-Bold, Segoe UI" font-size="46px" font-weight="700" transform="translate(-11753 905.491)">
+                <tspan x="0" y="50">$88.4 </tspan><tspan x="0" y="80">млн</tspan>
+            </text>
+            <path id="Контур_109" d="M-12359.5 1215.807v-75.795" class="cls-10" transform="translate(76.67 35.476)"/>
+            <path id="Контур_110" d="M-12359.5 1342.5v-202.488" class="cls-10" transform="translate(331.521 -91.219)"/>
+            <path id="Контур_114" d="M-12720.608 1214.674h535.686" class="cls-10" transform="translate(156.945 -171.607)"/>
+            <path id="Контур_115" d="M-12720.611 1214.674h789.9" class="cls-10" transform="translate(156.947 -316.146)"/>
+            <path id="Контур_111" fill="none" stroke="#707070" stroke-dasharray="2 8" stroke-linecap="round" stroke-width="3px" d="M-12359.5 1492.552v-352.54" opacity="0.5" transform="translate(586.372 -241.27)"/>
+            <path id="Контур_112" d="M-12720.617 1214.674h23.713" class="cls-10" transform="translate(156.944 35.598)"/>
+            <path id="Контур_113" d="M-12720.611 1214.674h281.479" class="cls-10" transform="translate(156.947 -37.177)"/>
+            <text id="_20.8_млн-2" class="cls-12" transform="rotate(-16 -1989.831 45141.673)">
+                <tspan x="-66.51" y="27">+$20.8 млн</tspan>
+            </text>
+            <text id="_31.6_млн" class="cls-12" transform="rotate(-27 -3820.234 26051.986)">
+                <tspan x="-64.636" y="27">+$31.6 млн</tspan>
+            </text>
+            <text id="_36_млн" class="cls-12" transform="rotate(-30 -4177.85 22879.288)">
+                <tspan x="-56.592" y="27">+$36 млн</tspan>
+            </text>
+            <text id="Раунд_A:_Pre-sale" class="cls-13" transform="translate(-12477 779.491)">
+                <tspan x="-37.314" y="19">Раунд A: </tspan><tspan x="-33.812" y="43">Pre-sale</tspan>
+            </text>
+            <text id="Раунд_B:_Internal_crowdsale" class="cls-13" transform="translate(-12236 779.491)">
+                <tspan x="-36.756" y="19">Раунд B: </tspan><tspan x="-77.871" y="43">Internal crowdsale</tspan>
+            </text>
+            <text id="Раунд_C:_Public_crowdsale" class="cls-13" transform="translate(-11979 779.491)">
+                <tspan x="-36.602" y="19">Раунд C: </tspan><tspan x="-70.774" y="43">Public crowdsale</tspan>
+            </text>
+            <text id="Реализация_сейчас_" class="cls-13" transform="translate(-11767 779.491)">
+                <tspan x="-51.838" y="19">Реализация</tspan><tspan x="-36.048" y="43">(сейчас)</tspan>
+            </text>
+            <text id="Simcord_использует_вырученные_средства_для_реализации_Системы_Bitbon._Дополнительная_прибыль_поступает_от_покупки_Инвесторами_Bitbon_на_бирже_Bit_Trade." fill="#3d3d3d" font-family="SegoeUI-Semibold, Segoe UI" font-size="16px" font-weight="600" opacity="0.6" transform="translate(-11753 1013.491)">
+                <tspan x="0" y="17">Simcord использует </tspan><tspan x="0" y="38">вырученные средства </tspan><tspan x="0" y="59">для реализации </tspan><tspan x="0" y="80">Системы Bitbon.</tspan><tspan x="0" y="122">Дополнительная </tspan><tspan x="0" y="143">прибыль поступает от </tspan><tspan x="0" y="164">покупки Инвесторами </tspan><tspan x="0" y="185">Bitbon на бирже </tspan><tspan fill="#005dff"><tspan x="0" y="206" text-decoration="underline">Bit Trade</tspan><tspan y="206" fill="#3d3d3d">.</tspan></tspan>
+            </text>
+            <path id="Контур_1489" fill="none" stroke="#d2d2d2" stroke-linecap="round" d="M-12720.607 1214.674h970" transform="translate(181.607 36.393)"/>
+            <g id="Сгруппировать_43" transform="translate(-12550.092 890.832)">
+                <circle id="Эллипс_1" cx="5" cy="5" r="5" class="cls-19" transform="translate(6.092 354.659)"/>
+                <circle id="Эллипс_2" cx="8" cy="8" r="8" class="cls-19" transform="translate(258.092 277.659)"/>
+                <circle id="Эллипс_3" cx="12" cy="12" r="12" class="cls-19" transform="translate(509.092 141.659)"/>
+                <path id="Контур_107" fill="none" stroke="#7596e2" stroke-width="5px" d="M-12693.437 1114.413l256.46-72.3 254.173-130.347 256.475-147.321" transform="translate(12703.814 -755.289)"/>
+                <path id="Контур_1421" fill="none" stroke="#399a1d" stroke-width="5px" d="M-11926.33 753.665l168.7-51.483" transform="translate(12703.814 -744.508)"/>
+                <path id="Контур_1422" fill="none" stroke="#399a1d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5px" d="M952.993-26.333l16.424-22.9-27.978-4.058" transform="translate(-21 6)"/>
+                <g id="Сгруппировать_534">
+                    <g id="Эллипс_29" fill="#f6f6f6" stroke="#399a1d" stroke-width="4px" transform="translate(752.092 -13.34)">
+                        <circle cx="22" cy="22" r="22" stroke="none"/>
+                        <circle cx="22" cy="22" r="20" fill="none"/>
+                    </g>
+                    <circle id="Эллипс_4" cx="13" cy="13" r="13" fill="#399a1d" transform="translate(761.092 -4.34)"/>
+                </g>
+            </g>
+        </g>
+        <g id="Сгруппировать_633">
+            <g id="Сгруппировать_538">
+                <path id="Контур_108" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -375.865)"/>
+                <path id="Контур_1490" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -383.865)"/>
+                <path id="Контур_108-2" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -367.865)"/>
+                <path id="Контур_108-3" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -359.865)"/>
+                <path id="Контур_108-4" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -351.865)"/>
+                <path id="Контур_108-5" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -343.865)"/>
+                <path id="Контур_108-6" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -335.865)"/>
+                <path id="Контур_108-7" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -327.865)"/>
+                <path id="Контур_108-8" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -319.865)"/>
+                <path id="Контур_108-9" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -311.865)"/>
+                <path id="Контур_108-10" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -303.865)"/>
+                <path id="Контур_108-11" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -295.865)"/>
+                <path id="Контур_108-12" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -287.865)"/>
+                <path id="Контур_108-13" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -279.865)"/>
+                <path id="Контур_108-14" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -271.865)"/>
+                <path id="Контур_108-15" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -263.865)"/>
+                <path id="Контур_108-16" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -255.865)"/>
+                <path id="Контур_108-17" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -247.865)"/>
+                <path id="Контур_108-18" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -239.865)"/>
+                <path id="Контур_108-19" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -231.865)"/>
+                <path id="Контур_108-20" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -223.865)"/>
+                <path id="Контур_108-21" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -215.865)"/>
+                <path id="Контур_108-22" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -207.865)"/>
+                <path id="Контур_108-23" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -199.865)"/>
+                <path id="Контур_108-24" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -191.865)"/>
+                <path id="Контур_108-25" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -183.865)"/>
+                <path id="Контур_108-26" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -175.865)"/>
+                <path id="Контур_108-27" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -167.865)"/>
+                <path id="Контур_108-28" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -159.865)"/>
+                <path id="Контур_108-29" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -151.865)"/>
+                <path id="Контур_108-30" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -143.865)"/>
+                <path id="Контур_108-31" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -135.865)"/>
+                <path id="Контур_108-32" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -127.865)"/>
+                <path id="Контур_108-33" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -119.865)"/>
+                <path id="Контур_108-34" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -111.865)"/>
+                <path id="Контур_108-35" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -103.865)"/>
+                <path id="Контур_108-36" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -95.865)"/>
+                <path id="Контур_108-37" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -87.865)"/>
+                <path id="Контур_108-38" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -79.865)"/>
+                <path id="Контур_108-39" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -71.865)"/>
+                <path id="Контур_108-40" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -63.865)"/>
+                <path id="Контур_108-41" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -55.865)"/>
+                <path id="Контур_108-42" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -47.865)"/>
+                <path id="Контур_108-43" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -39.865)"/>
+                <path id="Контур_108-44" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -31.865)"/>
+                <path id="Контур_108-45" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -23.865)"/>
+                <path id="Контур_108-46" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -15.865)"/>
+                <path id="Контур_108-47" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 -7.865)"/>
+                <path id="Контур_108-48" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 .135)"/>
+                <path id="Контур_108-49" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 8.135)"/>
+                <path id="Контур_108-50" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 16.135)"/>
+                <path id="Контур_108-51" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 24.135)"/>
+                <path id="Контур_108-52" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 32.135)"/>
+                <path id="Контур_108-53" d="M-12002.543 1209.068h-8.318" class="cls-25" transform="translate(-575.458 40.135)"/>
+            </g>
+            <g id="Сгруппировать_44" opacity="0.7" transform="translate(-12614.249 882.812)">
+                <text id="_10" class="cls-27" transform="translate(.249 338.679)">
+                    <tspan x="0" y="0">10</tspan>
+                </text>
+                <text id="_20" class="cls-27" transform="translate(.249 297.679)">
+                    <tspan x="0" y="0">20</tspan>
+                </text>
+                <text id="_30" class="cls-27" transform="translate(.249 258.679)">
+                    <tspan x="0" y="0">30</tspan>
+                </text>
+                <text id="_40" class="cls-27" transform="translate(.249 217.679)">
+                    <tspan x="0" y="0">40</tspan>
+                </text>
+                <text id="_50" class="cls-27" transform="translate(.249 176.679)">
+                    <tspan x="0" y="0">50</tspan>
+                </text>
+                <text id="_60" class="cls-27" transform="translate(.249 136.679)">
+                    <tspan x="0" y="0">60</tspan>
+                </text>
+                <text id="_70" class="cls-27" transform="translate(.249 95.679)">
+                    <tspan x="0" y="0">70</tspan>
+                </text>
+                <text id="_80" class="cls-27" transform="translate(.249 54.679)">
+                    <tspan x="0" y="0">80</tspan>
+                </text>
+                <text id="_90" class="cls-27" transform="translate(.249 14.679)">
+                    <tspan x="0" y="0">90</tspan>
+                </text>
+            </g>
+            <text id="млн_" fill="#3d3d3d" font-family="SegoeUI-Semibold, Segoe UI" font-size="15px" font-weight="600" opacity="0.7" transform="translate(-12610 797.491)">
+                <tspan x="-20.398" y="16">млн $</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,87 @@
+{
+  "plan_1": {
+    "title":"Дорожная карта",
+    "subtitle": "план развития",
+    "list": [
+      {
+        "period": "2018",
+        "tasks": [
+          {
+            "text": "Запуск биржи цифровых активов <span class='bold'>Bit Trade</span>",
+            "done": "true"
+          },
+          {
+            "text": "<span class='bold'>Запуск сети</span> блокчейна Системы Bitbon.",
+            "done": "true"
+          },
+          {
+            "text": "Релиз мобильного приложения <span class='bold'>Bitbon Space</span> для iOS и Android.",
+            "done": "true"
+          },
+          {
+            "text": "<span class='bold'>Расширение сети</span> Системы Bitbon дополнительными нодами.",
+            "done": "true"
+          },
+          {
+            "text": "Сотрудничество с Национальной <span class='bold'>академией правовых наук Украины.</span>",
+            "done": "true"
+          },
+          {
+            "text": "Международная конференция <span class='bold'>SIT2019</span> на тему развития Bitbon System.",
+            "done": "true"
+          }
+        ] 
+      },
+      {
+        "period": "2019",
+        "tasks": [
+          {
+            "text": "<span class='bold'>Аналитические исследования</span> по адаптации Системы Bitbon к нормам международного законодательства.",
+            "done": "true"
+          },
+          {
+            "text": "Simcord получил <span class='bold'>3 уникальных научно-правовых заключения.</span>",
+            "done": "true"
+          },
+          {
+            "text": "Участие в международных юридических <span class='bold'>форумах и круглых столах.</span>",
+            "done": "true"
+          }
+        ] 
+      },
+      {
+        "period": "2020",
+        "tasks": [
+          {
+            "text": "Разработан алгоритм достижения консенсуса <span class='bold'>Community PoS.</span>",
+            "done": "true"
+          },
+          {
+            "text": "<span class='bold'>Расширение сети</span> блокчейн Системы Bitbon.",
+            "done": "true"
+          },
+          {
+            "text": "Релиз мобильного приложения <span class='bold'>One Space</span> для iOS и Android.",
+            "done": "true"
+          },
+          {
+            "text": "Запуск <span class='bold'>майнинга</span> обеспечения консенсуса.",
+            "done": "true"
+          },
+          {
+            "text": "<span class='bold'>Инструменты</span> для работы майнеров.",
+            "done": "true"
+          },
+          {
+            "text": "Подписан первый <span class='bold'>меморандум</span> о сотрудничестве с банком.",
+            "done": "true"
+          },
+          {
+            "text": "<span class='bold'>Законопроект</span> №4328, о токенизированных активах и криптоактивах",
+            "done": "true"
+          }
+        ] 
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="639.294" height="125.307" viewBox="0 0 639.294 125.307">
+    <defs>
+        <style>
+            .cls-3{fill:#fff}
+        </style>
+    </defs>
+    <g id="Сгруппировать_32" transform="translate(-138.706 -719.097)">
+        <text id="Bitbon_System" fill="#fff" font-family="Roboto-Bold, Roboto" font-size="70px" font-weight="700" transform="translate(311 731)">
+            <tspan x="0" y="67">Bit</tspan><tspan y="67" font-family="Roboto-Regular, Roboto" font-weight="400">bon System</tspan>
+        </text>
+        <g id="Сгруппировать_30" transform="translate(-213 78)">
+            <path id="Контур_1" d="M96.73 111.67a83.5 83.5 0 0 1 72.364 41.766A83.518 83.518 0 0 1 96.73 111.67z" class="cls-3" transform="translate(327.34 612.967)"/>
+            <path id="Контур_2" d="M92.967 0a83.63 83.63 0 0 1 0 83.533 83.63 83.63 0 0 1 0-83.533z" class="cls-3" transform="translate(331.103 641.097)"/>
+            <path id="Контур_3" d="M72.364 111.67A83.51 83.51 0 0 1 0 153.436a83.5 83.5 0 0 1 72.364-41.766z" class="cls-3" transform="translate(351.706 612.967)"/>
+        </g>
+    </g>
+</svg>

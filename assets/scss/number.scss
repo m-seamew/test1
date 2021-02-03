@@ -1,0 +1,39 @@
+.number__container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.number__element{
+  flex: 1 0 20%;
+  min-width: 20%;
+  //max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3% 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.number__num{
+  color: #e2783b;
+  line-height: 1;
+  font-size: $fontOfNumbers; 
+}
+
+.number__title{
+
+}
+
+@media (max-width: 730px){
+  .number__element{
+    flex: 1 0 50%;
+    margin-left: 0px;
+    margin-right: 0px;
+    //min-width: 40%;
+  }
+}
