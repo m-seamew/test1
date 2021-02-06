@@ -88,16 +88,7 @@ export default {
   // pointer-events: auto;
    opacity: 1;
   }
-  
 
-  @keyframes visibl {
-  0%   { opacity: 0;
-       }
-  60%  {opacity: 0.8;
-        }
-  100% { opacity: 1;
-        }
-  }
 
 
   html{

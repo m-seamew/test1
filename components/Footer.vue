@@ -1,12 +1,13 @@
 <template>
   <div> <Burger :active="isActive" @closeBurger="burger('close')"></Burger>
-  <div class="footer__wrapper" :class="isSmall ? 'footer__wrapper--small' : null">
+  <div class="footer__wrapper" :class="isSmall ? 'footer__wrapper--small' : 'footer__wrapper--big'">
     <MobileMenu @burgerOpen="burger('open')"></MobileMenu>
+
     <div class="footer__container">
        <div class="footer__container-content">
          <client-only>
 
-          <flickity ref="flickity" :options="flickityOptions">
+         <flickity ref="flickity" :options="flickityOptions">
             <div v-for="(el, index) in $t('footer.menu')" :key="index" class="footer__slide-container" :class="checkIsActive(el.slug) ? 'footer__slide-container--active' : null">
                 <a class="footer__link" :href="el.link"></a>
                 <div class="footer__slide-item">
@@ -16,7 +17,7 @@
                   <div class="footer__slide-text">{{el.text}}</div>
                 </div>
             </div>
-          </flickity> 
+          </flickity>
 
          </client-only>   
        </div> 
@@ -86,19 +87,35 @@ export default {
 
 <style lang="scss">
 
-  
+  @keyframes slideDown{
+  from {
+    transform: translateY(0);
+  } 
+  to {
+    transform: translateY(54px);
+  }
+  }
+
+  @keyframes slideUp{
+  from {
+    transform: translateY(54px);
+  } 
+  to {
+    transform: translateY(0);
+  }
+  }
+
   .footer__img-container{
     width: 55px;
     height:55px;
     margin: 0 auto;
-    transition: scale .2s;
-    transition:  height .3s, opacity 1s;
+    //transition:  height .3s, opacity 1s;
     opacity: 1;
     //transform: scale(0);
   }
   .footer__slide-item{ 
     width: 100%;
-    padding: 0 15%;
+    padding: 15%;
   }
 
   .footer__slide-container:not(:last-child) .footer__slide-item{
@@ -114,18 +131,20 @@ export default {
   .footer__slide-container{
     position: relative;
     width: 30%;
-    min-width: 120px;
+    //height: auto;
     min-height: 124px;
+    //max-height: 124px;
     font-size: 13px;
     line-height: 1.23;
+    overflow: hidden;
     color: #6e6e6e;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 2% 5%;
-    transition:  height .3s, max-height .3s;
+    padding: 0 5%;
+    transition: max-height .5s;
 
   }
 
@@ -157,17 +176,25 @@ export default {
   .footer__wrapper{
     width: 100%;
     background-image: linear-gradient(to bottom, #434343 2%, #101010 100%);
-    //backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
     position: fixed;
+    max-height: 124px;
+    //animation: slideDown 2s forwards linear;
+    //animation: slideDown 2s backwards;
     bottom: 0;
-    min-height: 124px;
-    transition:  height .3s, max-height .3s;
+    //max-height: 124px;
+    height: 124px;
+    //transition:  all .5s;
+    //animation: slideDown 2s backwards;
 
     .flickity-viewport{
-       // transition:  height .3s, max-height .3s;
+       max-height: 124px;
     }
   }
 
+  .footer__wrapper--big{
+    animation: slideUp .5s forwards linear;
+  }
   .footer__slide-text{
     margin-top: 7px;
   }
@@ -175,19 +202,27 @@ export default {
 
 
   .footer__wrapper--small{
-    min-height: 70px;
-    height: 70px;
-    transition:  height .3s, max-height .3s, transform .2s;
+    //height: 70px;
+    //min-height: 70px;
+    //height: 70px;
+    animation: slideDown .5s forwards linear;
 
-    .footer__slide-container{
-       min-height: 70px;
-       height: 70px;
+    .footer__img-container{
+      display: none;
+    }
+
+      .footer__slide-text{
+    margin-top: 4px;
+  }
+  /*  .footer__slide-container{
+       max-height: 70px;
+      // height: 70px;
        transition:  height .3s, max-height .3s;
        padding: 0% 5%;
     }
 
     .flickity-viewport{
-      height: 70px !important;
+     max-height: 70px !important;
       //transition:  height .3s, max-height .3s,  transform .2s;
     }
     .footer__slide-item{
@@ -198,7 +233,7 @@ export default {
       height: 0px;
       opacity: 0;
       transition:  height .3s, opacity .05s;
-}
+}*/
   }
 
   

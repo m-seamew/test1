@@ -81,7 +81,7 @@ export default {
     const tempIsLike = localStorage.getItem('isLike');
     if(tempIsLike !== undefined && tempIsLike == "true") {
       this.isLike = true;
-      //this.$refs.lottie.goFrameAndPlay(96, false)
+      this.$refs.lottie.goFrameAndPlay(96, false)
     }
   }
 }

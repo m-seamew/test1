@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-page" v-if="loadingCheck || loadingAnimation">
+  <div class="loading-page" v-if="loading" :class="!loadingAnimation ? 'loading__hide' : null">
     <div class="preloader__container">
       <div class="preloader__logo">
          <img :src="require('~/assets/img/preloader/preloader__logo.svg')" alt="Bitbon Expert" class="preloader__img">
@@ -26,6 +26,7 @@
 <script>
 export default {
   data: () => ({
+    loading: true,
     loadingAnimation: true,
   }),
   computed: {
@@ -33,8 +34,15 @@ export default {
       return this.$store.getters['preloading/getLoading'];
     }
   },
-  mounted(){
-    setTimeout(_=>this.loadingAnimation = false, 5000);
+  watch: {
+    loadingCheck(newValue){
+      if(this.loadingCheck === true){
+        this.loading = true;
+      }else if(this.loadingCheck === false){
+        setTimeout(_=>{this.loading = false}, 4500);
+        setTimeout(_=>{this.loadingAnimation = false}, 4000);
+    }
+  }
   }
 }
 </script>
@@ -52,7 +60,21 @@ export default {
   text-align: left;
   display: flex;
   justify-content: left;
+  pointer-events: none
 }
+
+.loading__hide{
+  animation: visibl .5s forwards;
+}
+
+ @keyframes visibl {
+  0%   { opacity: 1;
+       }
+  20%  {opacity: 0.9;
+        }
+  100% { opacity: 0;
+        }
+  }
 
 .preloader__text-about{
    line-height: 1.54;
