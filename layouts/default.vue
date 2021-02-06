@@ -70,8 +70,8 @@ export default {
 <style lang="scss">
   @import '~/assets/scss/variables';
   .main{
-    //transition: opacity .5s;
-   // opacity: 0;
+    transition: opacity .5s;
+    opacity: 0;
     background-color: $bgdefault; 
    // pointer-events: none;
 
@@ -79,12 +79,12 @@ export default {
 
   .hide{
    animation: visibl .5s forwards;
-   pointer-events: auto;
+   //pointer-events: auto;
    opacity: 1;
   }
 
    .hide-test{
-   pointer-events: auto;
+  // pointer-events: auto;
    opacity: 1;
   }
   
