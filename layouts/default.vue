@@ -32,8 +32,8 @@ export default {
     }
   },
   beforeMount(){
-    setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
-    setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide--test");}, 3500);
+    //setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
+    //setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide--test");}, 3500);
     this.$fire.databaseReady()
         .then(()=>{
           this.$fire.database.ref().on('value', snapshot => {
@@ -54,12 +54,12 @@ export default {
     this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
     this.$store.dispatch('isMobile/changeIsMobile', this.isMobile)
     window.addEventListener("resize", this.checkIfMobile);
-    /*
+    
 
     this.$nuxt.$on('finishLoading', () => {   
         console.log('testing'); 
         setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
-    })*/
+    })
   },
   beforeDestroy(){
     window.removeEventListener('resize', this.checkIfMobile); 
