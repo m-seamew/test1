@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-page">
+  <div class="loading-page" v-if="loadingCheck || loadingAnimation">
     <div class="preloader__container">
       <div class="preloader__logo">
          <img :src="require('~/assets/img/preloader/preloader__logo.svg')" alt="Bitbon Expert" class="preloader__img">
@@ -26,15 +26,15 @@
 <script>
 export default {
   data: () => ({
-    loading: false
+    loadingAnimation: true,
   }),
-  methods: {
-    start () {
-      this.loading = true
-    },
-    finish () {
-      this.loading = false
+  computed: {
+    loadingCheck(){
+      return this.$store.getters['preloading/getLoading'];
     }
+  },
+  mounted(){
+    setTimeout(_=>this.loadingAnimation = false, 5000);
   }
 }
 </script>
@@ -47,6 +47,7 @@ export default {
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 9999;
   background-image: linear-gradient(to bottom, #434343 2%, #101010 100%);
   text-align: left;
   display: flex;

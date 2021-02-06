@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Preloader></Preloader>
     <TableBlok></TableBlok>
     <ChartScreen id="test1"></ChartScreen>
     <Mainaboutsystem></Mainaboutsystem> 
@@ -60,6 +61,8 @@ import Plan2 from '~/components/bloks/plan2';
 
 import Potential from '~/components/bloks/potential';
 
+import Preloader from '~/components/loading'
+
 const VueScrollTo = require('vue-scrollto');
 
 export default {
@@ -95,6 +98,8 @@ export default {
     Plan1,
     Plan2,
     Potential,
+
+    Preloader,
   },
   methods: {
     addHashToLocation(hash) {
@@ -137,11 +142,9 @@ export default {
        this.$store.dispatch('slug/changeSlug', '');
      }
   */
-
   this.$nextTick(function () {
-    this.$nuxt.$emit('finishLoading')
+      this.$store.dispatch('preloading/changeLoading', false);
   })
-
     
   },
   /*

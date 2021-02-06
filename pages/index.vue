@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Preloader></Preloader>
     <TableBlok ></TableBlok>
     <Mainaboutsystem  ></Mainaboutsystem>
     <Infrastructure2></Infrastructure2>
@@ -12,6 +13,8 @@ import Infrastructure2 from '~/components/bloks/infrastructure2';
 import TableBlok from '~/components/bloks/tablecomp';
 import Mainaboutsystem from '~/components/bloks/mainaboutsystem';
 
+import Preloader from '~/components/loading'
+
 export default {
   data: () => ({
     lang: 'ru',
@@ -21,6 +24,7 @@ export default {
     Infrastructure2,
     TableBlok,
     Mainaboutsystem,
+    Preloader,
   },
   methods: {
     changeLanguage(lang){
@@ -31,9 +35,11 @@ export default {
    
   },
   mounted(){
-      this.$nextTick(function () {
-      this.$nuxt.$emit('finishLoading');
+
+    this.$nextTick(function () {
+      this.$store.dispatch('preloading/changeLoading');
     })
+
   },
   scrollToTop: false,
 }

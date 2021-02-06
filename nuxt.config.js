@@ -23,7 +23,6 @@ export default {
     emulatorHost: 'localhost',
   },*/
 
-  loading: '~/components/loading.vue',
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
