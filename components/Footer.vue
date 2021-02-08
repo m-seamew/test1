@@ -53,18 +53,21 @@ export default {
   methods:{
     scrolCheck(){
       this.scroll < 0 ? this.scroll = 0 : null;
-      
-      if(window.scrollY >= this.scroll) {
-        
-        this.isSmall = true 
-        this.scroll = window.scrollY; 
+      if(window.scrollY > this.scroll) {
+          setTimeout( ()=>{this.isSmall = true}, 500);
       } else {
-        this.isSmallFixed ? this.isSmall = true : this.isSmall = false;
-        this.scroll = window.scrollY; 
+
+        if(this.isSmallFixed === false){
+          setTimeout( ()=>{this.isSmall = false}, 500);
+        } else {
+           setTimeout( ()=>{this.isSmall = true}, 500);
+        }
+        
       }
+      this.scroll = window.scrollY; 
     },
     fixingBottomMenu(){
-      setTimeout( ()=>{this.isSmallFixed = false}, 1000);
+      setTimeout( ()=>{this.isSmallFixed = false}, 2000);
     },
     tablePoint(objData){
       const data = [];

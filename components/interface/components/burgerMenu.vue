@@ -10,6 +10,7 @@
                 el:`#${el.hash}`,
                 onDone: menuFixFinish,
                 offset: -50,
+                duration: 500,
                 cancelable: false,
               }" class="burger__list-link" @click="$emit('closeBurger')">{{el.name}}</a>
           </li>

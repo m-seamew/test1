@@ -3,6 +3,7 @@
        <div id="loadcontent" class="main">
          <Header :bitbonprice="bitbonPrice"></Header>
          <Nuxt :bitbonprice="bitbonPrice"/>
+         <div v-if="isMobile" class="padding-bottom-fix"/>
          <Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>
        </div>       
   </div>
