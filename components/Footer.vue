@@ -54,14 +54,14 @@ export default {
     scrolCheck(){
       this.scroll < 0 ? this.scroll = 0 : null;
       if(window.scrollY > this.scroll) {
-          setTimeout( ()=>{this.isSmall = true},);
+          setTimeout( ()=>{this.isSmall = true},300);
       } else {
 
         if(this.isSmallFixed === false){
-          setTimeout( ()=>{this.isSmall = false},);
+          setTimeout( ()=>{this.isSmall = false},300);
         }
         else {
-           setTimeout( ()=>{this.isSmall = true},);
+           setTimeout( ()=>{this.isSmall = true},300);
         }
         
       }
