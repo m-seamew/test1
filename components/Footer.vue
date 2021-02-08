@@ -1,5 +1,5 @@
 <template>
-  <div> <Burger :active="isActive" @closeBurger="burger('close')"></Burger>
+  <div> <Burger :active="isActive" @closeBurger="burger('close')" @bottomMenuFix="fixingBottomMenu"></Burger>
   <div class="footer__wrapper" :class="isSmall ? 'footer__wrapper--small' : 'footer__wrapper--big'">
     <MobileMenu @burgerOpen="burger('open')"></MobileMenu>
 
@@ -48,19 +48,23 @@ export default {
     isActive: false,
     scroll: 0,
     isSmall: false,
+    isSmallFixed: false,
   }),
   methods:{
     scrolCheck(){
       this.scroll < 0 ? this.scroll = 0 : null;
       
-      if(window.scrollY > this.scroll) {
-        this.isSmall = true;
+      if(window.scrollY >= this.scroll) {
+        
+        this.isSmall = true 
         this.scroll = window.scrollY; 
       } else {
-        this.isSmall = false;
+        this.isSmallFixed ? this.isSmall = true : this.isSmall = false;
         this.scroll = window.scrollY; 
       }
-
+    },
+    fixingBottomMenu(){
+      setTimeout( ()=>{this.isSmallFixed = false}, 1000);
     },
     tablePoint(objData){
       const data = [];
@@ -73,7 +77,11 @@ export default {
       return this.$route.path == slug ? true : false; 
     },
     burger(param){
-      param === 'open' ? this.isActive = true : this.isActive = false;
+      if(param === 'open') {
+      this.isActive = true;
+      this.isSmallFixed = true;
+      } else {
+      this.isActive = false;}
     }
   },
   mounted(){ 
@@ -182,6 +190,7 @@ export default {
     //animation: slideDown 2s forwards linear;
     //animation: slideDown 2s backwards;
     bottom: 0;
+    z-index: 999;
     //max-height: 124px;
     height: 124px;
     //transition:  all .5s;

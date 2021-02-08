@@ -44,7 +44,7 @@ export default {
     animationLike(){
           this.$refs.lottie.reverseAnim(1);
           setTimeout(() => {
-           this.$refs.lottie.play();
+           this.$refs.lottie.goFrameAndPlay(27, 96)
           },);
 
           localStorage.setItem('isLike', 'true');
@@ -78,11 +78,13 @@ export default {
   },
   mounted(){
     this.$fire.databaseReady();
+    this.$nextTick(()=>{
     const tempIsLike = localStorage.getItem('isLike');
     if(tempIsLike !== undefined && tempIsLike == "true") {
       this.isLike = true;
       this.$refs.lottie.goFrameAndPlay(96, false)
     }
+  })
   }
 }
 </script>

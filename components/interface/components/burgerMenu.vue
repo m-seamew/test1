@@ -5,7 +5,13 @@
 
         <ul class="burger__menu">
           <li class="burger__list-item" v-for="(el, index) in tablePoint($t('burger.points'))" :key="index">
-            <a href="#" v-scroll-to="`#${el.hash}`" class="burger__list-link" @click="$emit('closeBurger')">{{el.name}}</a>
+            <a href="#"
+              v-scroll-to="{
+                el:`#${el.hash}`,
+                onDone: menuFixFinish,
+                offset: -50,
+                cancelable: false,
+              }" class="burger__list-link" @click="$emit('closeBurger')">{{el.name}}</a>
           </li>
         </ul>
     </div>
@@ -29,12 +35,21 @@ export default {
       }
       return data;
     },
+    menuFixFinish(){
+        setTimeout(()=>{ this.$emit('bottomMenuFix', false)}, 1000)
+    }
+  },
+  watch:{
+    active: (val)=>{
+      val === true
+        ? document.querySelector('body').style.overflow = "hidden"
+        : document.querySelector('body').style.overflow = "auto";
+    }
   }
 }
 </script>
 
 <style lang="scss">
-  
   .burger{
     position: fixed;
     top: 0;
@@ -52,7 +67,7 @@ export default {
   }
 
   .burger__active{
-    z-index: 999;
+    z-index: 1000;
     opacity: 1;
     pointer-events: auto;
     transition: opacity .5s
