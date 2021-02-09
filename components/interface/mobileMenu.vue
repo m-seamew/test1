@@ -79,12 +79,12 @@ export default {
   mounted(){
     this.$fire.databaseReady();
     this.$nextTick(()=>{
-    const tempIsLike = localStorage.getItem('isLike');
-    if(tempIsLike !== undefined && tempIsLike == "true") {
-      this.isLike = true;
-      this.$refs.lottie.goFrameAndPlay(96, false)
-    }
-  })
+      const tempIsLike = localStorage.getItem('isLike');
+      if(tempIsLike !== undefined && tempIsLike == "true") {
+        this.isLike = true;
+        this.$refs.lottie !== undefined ? this.$refs.lottie.goFrameAndPlay(96, false) : null;
+      }
+    })
   }
 }
 </script>

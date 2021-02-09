@@ -3,6 +3,7 @@
        <div id="loadcontent" class="main">
          <Header :bitbonprice="bitbonPrice"></Header>
          <Nuxt :bitbonprice="bitbonPrice"/>
+         <Contacts></Contacts>
          <div v-if="isMobile" class="padding-bottom-fix"/>
          <Footer v-if="isMobile" @burgerOpen="burger('open')"></Footer>
        </div>       
@@ -33,8 +34,6 @@ export default {
     }
   },
   beforeMount(){
-    //setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
-    //setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide--test");}, 3500);
     this.$fire.databaseReady()
         .then(()=>{
           this.$fire.database.ref().on('value', snapshot => {

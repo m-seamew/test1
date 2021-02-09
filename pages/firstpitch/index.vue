@@ -65,7 +65,10 @@ import Preloader from '~/components/loading'
 
 const VueScrollTo = require('vue-scrollto');
 
+import layoutMiddleware from '@/middleware/layoutMiddleware'
+
 export default {
+  layout: layoutMiddleware,
   data: () => ({
     lang: 'ru',
     observer: {},

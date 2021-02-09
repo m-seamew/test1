@@ -60,7 +60,8 @@ export default {
       brotli: {
         threshold: 10240
       }
-    }]
+    }],
+  ['@nuxtjs/device'],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

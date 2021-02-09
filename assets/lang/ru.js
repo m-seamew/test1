@@ -9,19 +9,22 @@ export default {
         img: 'slide1.jpg',
         text: 'Обзор проекта Система Bitbon',
         link: '/firstpitch',
-        slug: '/firstpitch'
+        slug: '/firstpitch',
+        bg_active: ['#3e4f94', '#00083e']
       },
       {
         img: 'slide1.jpg',
         text: 'Обзор проекта Система Bitbon',
         link: '/firstpitch',
-        slug: '/firstpitch2'
+        slug: '/firstpitch2',
+        bg_active: [ '#5b3f70', '#27133e']
       },
       {
         img: 'slide1.jpg',
         text: 'Обзор проекта Система Bitbon',
         link: '/firstpitch',
-        slug: '/firstpitch3'
+        slug: '/firstpitch3',
+        bg_active: ['#848a98', '#333540']
       },
     ]
   },

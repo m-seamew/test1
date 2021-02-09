@@ -8,7 +8,7 @@
          <client-only>
 
          <flickity ref="flickity" :options="flickityOptions">
-            <div v-for="(el, index) in $t('footer.menu')" :key="index" class="footer__slide-container" :class="checkIsActive(el.slug) ? 'footer__slide-container--active' : null">
+            <div v-for="(el, index) in $t('footer.menu')" :key="index" class="footer__slide-container" :class="checkIsActive(el.slug) ? 'footer__slide-container--active' : null" :style="checkIsActive(el.slug) ? createActiveStyles(el.bg_active) : null">
                 <a class="footer__link" :href="el.link"></a>
                 <div class="footer__slide-item">
                   <div class="footer__img-container">
@@ -54,21 +54,21 @@ export default {
     scrolCheck(){
       this.scroll < 0 ? this.scroll = 0 : null;
       if(window.scrollY > this.scroll) {
-          setTimeout( ()=>{this.isSmall = true},600);
+          setTimeout( ()=>{this.isSmall = true},300);
       } else {
 
         if(this.isSmallFixed === false){
-          setTimeout( ()=>{this.isSmall = false},600);
+          setTimeout( ()=>{this.isSmall = false},300);
         }
         else {
-           setTimeout( ()=>{this.isSmall = true},600);
+           setTimeout( ()=>{this.isSmall = true},300);
         }
         
       }
       this.scroll = window.scrollY; 
     },
     fixingBottomMenu(){
-      setTimeout( ()=>{this.isSmallFixed = false}, 600);
+      setTimeout( ()=>{this.isSmallFixed = false}, 500);
     },
     tablePoint(objData){
       const data = [];
@@ -86,6 +86,11 @@ export default {
       this.isSmallFixed = true;
       } else {
       this.isActive = false;}
+    },
+    createActiveStyles(colorArr){
+      return {
+        backgroundImage: `linear-gradient(to bottom, ${[...colorArr]})`,
+      }
     }
   },
   mounted(){ 
@@ -161,7 +166,7 @@ export default {
   }
 
   .footer__slide-container--active{
-    background-image: linear-gradient(to bottom, #3e4f94, #00083e);
+    //background-image: linear-gradient(to bottom, #3e4f94, #00083e);
     color: white
   }
 
