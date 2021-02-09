@@ -58,7 +58,7 @@ export default {
       } else {
 
         if(this.isSmallFixed === false){
-          setTimeout( ()=>{this.isSmall = false},600);
+          setTimeout( ()=>{this.isSmall = false},300);
         }
         else {
            setTimeout( ()=>{this.isSmall = true},300);
@@ -68,7 +68,7 @@ export default {
       this.scroll = window.scrollY; 
     },
     fixingBottomMenu(){
-      setTimeout( ()=>{this.isSmallFixed = false}, 2000);
+      setTimeout( ()=>{this.isSmallFixed = false}, 300);
     },
     tablePoint(objData){
       const data = [];

@@ -37,7 +37,7 @@ export default {
       return data;
     },
     menuFixFinish(){
-        setTimeout(()=>{ this.$emit('bottomMenuFix', false)}, 1000)
+        setTimeout(()=>{ this.$emit('bottomMenuFix', false)}, 0)
     }
   },
   watch:{
