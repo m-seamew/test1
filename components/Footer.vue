@@ -58,7 +58,7 @@ export default {
       } else {
 
         if(this.isSmallFixed === false){
-          setTimeout( ()=>{this.isSmall = false},300);
+          setTimeout( ()=>{this.isSmall = false},600);
         }
         else {
            setTimeout( ()=>{this.isSmall = true},300);
