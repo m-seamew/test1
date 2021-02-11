@@ -6,13 +6,13 @@
     <div class="pitches__container" :class="$device.isMobileOrTablet ? 'pitches__container--mobile' : null">
       <PitchPreviewComponent v-for="(el, index) in columnGen('even')" :key="index" :data="el"/>
     </div>
-     <Preloader></Preloader>
+    <Preloader></Preloader>
   </div> 
 </template>
 
 <script>
 import layoutMiddleware from '@/middleware/layoutMiddleware';
-
+import Preloader from '~/components/loading'
 import PitchPreviewComponent from '~/components/PitchPreviewComponent';
 
 export default {
@@ -23,6 +23,7 @@ export default {
   }),
   components: {
     PitchPreviewComponent,
+    Preloader
   },
   methods: {
     changeLanguage(lang){
