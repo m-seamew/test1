@@ -109,11 +109,13 @@ export default {
     z-index: 0;
     border-radius: 10px;
   }
-
-  .preview:hover{
+  
+  @media (min-width: 1250px) {
+    .preview:hover{
     transform: scale(1.05);
     transition: transform .5s;
     transition-delay: .3s;
+  }
   }
 
   .preview__text{
