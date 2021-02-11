@@ -65,7 +65,7 @@ import Preloader from '~/components/loading'
 
 const VueScrollTo = require('vue-scrollto');
 
-import layoutMiddleware from '@/middleware/layoutMiddleware'
+import layoutMiddleware from '@/middleware/layoutMiddleware';
 
 export default {
   layout: layoutMiddleware,
@@ -129,11 +129,10 @@ export default {
       this.observer[index] = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.intersectionRatio >= 0.6) {
-            this.addHashToLocation(`#${el[0]}`); 
-            //console.log('11');            
+            this.addHashToLocation(`#${el[0]}`);             
             }
         });
-      },{threshold: [0 , 0.25, 0.5, 0.75, 1]});
+      },{threshold: [0.25, 0.5, 0.75, 1]});
       this.observer[index].observe(el[1]);
     });
   }

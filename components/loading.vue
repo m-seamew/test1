@@ -43,6 +43,12 @@ export default {
         setTimeout(_=>{this.loadingAnimation = false}, 4000);
     }
   }
+  },
+  mounted(){
+    this.$nextTick(()=>{
+      setTimeout(_=>{this.loading = false}, 4500);
+      setTimeout(_=>{this.loadingAnimation = false}, 4000);
+    })
   }
 }
 </script>

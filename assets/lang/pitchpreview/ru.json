@@ -1,0 +1,60 @@
+{
+  "pitchpreview":[
+    {
+      "id": "firstPitch",
+      "title": "Обзор проекта Система Bitbon",
+      "content": "Идеальное решение для быстрого и эффективного ознакомления с Системой Bitbon. Независимо от квалификации в инвестировании и технологиях, каждый найдет ответы на свои вопросы.",
+      "color": {
+        "text":"#9dbfd9",
+        "header": "#fff",
+        "stat": "rgba(255,255,255, 0.5)"
+      },
+      "indeveloping": "false",
+      "img":"1.jpg",
+      "link": "/firstpitch",
+      "gradient": "linear-gradient(to bottom, transparent 0%, rgba(5, 43, 65, 0.85) 30%, #04273c 41%, #001d2e 100%)"
+    },
+    {
+      "id": "firstPitch",
+      "title": "Выгода Пользователей Системы Bitbon",
+      "content": "Единственная презентация в которой рассмотрены все финансово выгодные категории Пользователей Системы Bitbon. Определите свою стратегию участия и получайте стабильный доход при помощи Системы Bitbon.",
+      "color": {
+        "text":"#cb9dd9",
+        "header": "#fff",
+        "stat": "rgba(255,255,255, 0.5)"
+      },
+      "indeveloping": "false",
+      "img":"1.jpg",
+      "link": "/firstpitch",
+      "gradient": "linear-gradient(to bottom, rgba(55, 37, 74, 0), rgba(48, 32, 65, 0.85) 23%, #2e1f3e 41%, #1a1223)"
+    },
+    {
+      "id": "firstPitch",
+      "title": "Принцип заработка Партнера по Affiliate",
+      "content": "Узнайте как зарабатывают Партнеры сервиса Bit Trade по партнерской программе Affiliate. Становитесь Партнером команды Bitbon.Today и используйте данную презентацию как уникальный маркетинговый инструмент для привлечения новых Партнеров в свою социальную структуру.",
+      "color": {
+        "text":"#737d97",
+        "header": "#5a5d65",
+        "stat": "rgba(255,255,255, 0.5)"
+      },
+      "indeveloping": "true",
+      "img":"1.jpg",
+      "link": "/firstpitch",
+      "gradient": "linear-gradient(to bottom, rgba(222, 229, 246, 0), #dee5f6 23%, #dee5f6 41%, #dee5f6)"
+    },
+    {
+      "id": "firstPitch",
+      "title": "Выгодный майнинг 2021 -Community PoS",
+      "content": "Майнинг в 2021 году может быть выгодным и стабильным! Мы рассказываем о сервисе майнинга Community Pos от Системы Bitbon, которым пользуются уже десятки тысяч счастливчиков и получают 5% - 25% годовых от инвестиции, выраженных в Bitbon.",
+      "color": {
+        "text":"#a4a495",
+        "header": "#fff",
+        "stat": "rgba(255,255,255, 0.5)"
+      },
+      "indeveloping": "true",
+      "img":"4.jpg",
+      "link": "/firstpitch",
+      "gradient": "linear-gradient(to bottom, rgba(44, 44, 44, 0), rgba(38, 38, 38, 1) 23%, #242424 41%, #101010)"
+    }
+  ]
+}

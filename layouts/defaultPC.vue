@@ -243,6 +243,8 @@ export default {
   .loyaut__center-sidebar{
     margin-left: 380px;
     margin-top: 40px;
+    width: 100%;
+    height: auto;
   }
 
   .hide{
