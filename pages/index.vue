@@ -6,6 +6,7 @@
     <div class="pitches__container" :class="$device.isMobileOrTablet ? 'pitches__container--mobile' : null">
       <PitchPreviewComponent v-for="(el, index) in columnGen('even')" :key="index" :data="el"/>
     </div>
+     <Preloader></Preloader>
   </div> 
 </template>
 
