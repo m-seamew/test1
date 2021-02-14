@@ -18,7 +18,7 @@
           @mouseenter="changeActive(el, index)"
           @mouseleave="fixActive(index)">
                 <a class="footer__link" :href="el.link"></a>
-                <div class="footer__slide-item inside-menu__slide-item">
+                <div class="inside-menu__slide-item">
                   <div class="footer__img-container inside-menu__img-container">
                     <img :src='require(`~/assets/img/footer/${el.img}`)' alt="menu point" class="img">
                   </div>
@@ -242,6 +242,7 @@ export default {
   display: flex;
   align-items: center;
   padding: 0;
+  width: 100%;
 
 }
 
