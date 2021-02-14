@@ -1,36 +1,158 @@
 <template>
   <div class="container">
     <Preloader></Preloader>
-    <TableBlok></TableBlok>
-    <ChartScreen id="test1"></ChartScreen>
-    <Mainaboutsystem></Mainaboutsystem> 
-    
-    <TargetProject id="test2"></TargetProject>
-    <Plan1 id="test3"></Plan1>
-    <Plan2></Plan2>
 
-    <Potential></Potential>
+    <div>
+      <LazyHydrate>
+        <TableBlok/>
+      </LazyHydrate>
+    </div>
 
-    <Token1></Token1>
-    <Token2></Token2>
-    <Sience1></Sience1>
-    <Sience2></Sience2>
-    <Sience3></Sience3>
-    <Sience4 id="video"></Sience4>
-    <Service1></Service1>
-    <Service2></Service2>
-    <Service3></Service3>
-    <Devs></Devs>
-    <Vuvod></Vuvod>
-    <Stat></Stat>
+    <div id="test1">
+      <LazyHydrate never>
+        <ChartScreen/>
+      </LazyHydrate>
+    </div>
 
-    <Infrastructure1></Infrastructure1>
-    <Infrastructure2 id="test"></Infrastructure2>
-    <Infrastructure3></Infrastructure3>
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Mainaboutsystem/>
+      </LazyHydrate>
+    </div>
+
+    <div id="test2">
+      <LazyHydrate :when-visible="lazyOption">
+        <TargetProject/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Token1/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Token2/>
+      </LazyHydrate>
+    </div>
+
+    <!----->
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Devs/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Service1/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Service2/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Service3/>
+      </LazyHydrate>
+    </div>
+
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Infrastructure1/>
+      </LazyHydrate>
+    </div>
+
+    <div id="test">
+      <LazyHydrate :when-visible="lazyOption">
+        <Infrastructure2/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Infrastructure3/>
+      </LazyHydrate>
+    </div>
+ <!----->
+
+   <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Sience1/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Sience2/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Sience3/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Sience4/>
+      </LazyHydrate>
+    </div>
+
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Potential/>
+      </LazyHydrate>
+    </div>
+
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Potential/>
+      </LazyHydrate>
+    </div>
+
+
+    <div id="test3">
+      <LazyHydrate :when-visible="lazyOption">
+        <Plan1/>
+      </LazyHydrate>
+    </div>
+
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Plan2/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Vuvod/>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Stat/>
+      </LazyHydrate>
+    </div>
+  
   </div>
 </template>
 
 <script>
+/*
 import Infrastructure1 from '~/components/bloks/infrastructure1';
 import Infrastructure2 from '~/components/bloks/infrastructure2';
 import Infrastructure3 from '~/components/bloks/infrastructure3';
@@ -38,6 +160,7 @@ import Infrastructure3 from '~/components/bloks/infrastructure3';
 import TableBlok from '~/components/bloks/tablecomp';
 import Mainaboutsystem from '~/components/bloks/mainaboutsystem';
 import ChartScreen from '~/components/bloks/chartscreen';
+
 import TargetProject from '~/components/bloks/targetproject';
 import Token1 from '~/components/bloks/token1';
 import Token2 from '~/components/bloks/token2';
@@ -59,13 +182,12 @@ import Stat from '~/components/bloks/stat.vue';
 import Plan1 from '~/components/bloks/plan1';
 import Plan2 from '~/components/bloks/plan2';
 
-import Potential from '~/components/bloks/potential';
-
-import Preloader from '~/components/loading'
-
-const VueScrollTo = require('vue-scrollto');
+import Potential from '~/components/bloks/potential';*/
 
 import layoutMiddleware from '@/middleware/layoutMiddleware';
+import Preloader from '~/components/loading';
+import LazyHydrate from 'vue-lazy-hydration';
+const VueScrollTo = require('vue-scrollto');
 
 export default {
   layout: layoutMiddleware,
@@ -76,33 +198,35 @@ export default {
       'test1',
       'test2',
       'test3'
-    ]
+    ],
+    lazyOption: { rootMargin: '400px' },
   }),
   components: {
-    Infrastructure1,
-    Infrastructure2,
-    Infrastructure3,
-    TableBlok,
-    Mainaboutsystem,
-    ChartScreen,
-    TargetProject,
-    Token1,
-    Token2,
-    Sience1,
-    Sience2,
-    Sience3,
-    Sience4,
-    Service1,
-    Service2,
-    Service3,
-    Devs,
-    Vuvod,
-    Stat,
-    Plan1,
-    Plan2,
-    Potential,
+    Infrastructure1: () => import('~/components/bloks/infrastructure1'),
+    Infrastructure2: () => import('~/components/bloks/infrastructure2'),
+    Infrastructure3: () => import('~/components/bloks/infrastructure3'),
+    TableBlok:       () => import('~/components/bloks/tablecomp'),
+    Mainaboutsystem: () => import('~/components/bloks/mainaboutsystem'),
+    ChartScreen:     () => import('~/components/bloks/chartscreen'),
+    TargetProject:   () => import('~/components/bloks/targetproject'),
+    Token1:          () => import('~/components/bloks/token1'),
+    Token2:          () => import('~/components/bloks/token2'),
+    Sience1:         () => import('~/components/bloks/sience1'),
+    Sience2:         () => import('~/components/bloks/sience2'),
+    Sience3:         () => import('~/components/bloks/sience3'),
+    Sience4:         () => import('~/components/bloks/sience4'),
+    Service1:        () => import('~/components/bloks/service1'),
+    Service2:        () => import('~/components/bloks/service2'),
+    Service3:        () => import('~/components/bloks/service3'),
+    Devs:            () => import('~/components/bloks/devs'),
+    Vuvod:           () => import('~/components/bloks/vuvod'),
+    Stat:            () => import('~/components/bloks/stat.vue'),
+    Plan1:           () => import('~/components/bloks/plan1'),
+    Plan2:           () => import('~/components/bloks/plan2'),
+    Potential:       () => import('~/components/bloks/potential'),
 
     Preloader,
+    LazyHydrate,
   },
   methods: {
     addHashToLocation(hash) {

@@ -3,7 +3,7 @@ export default {
     link_text: `по&nbsp;<a :href="link" class="link-help">ccылке</a>`
   },
 
-  footer: {
+  footer: { 
     menu: [
       {
         img: 'slide1.jpg',

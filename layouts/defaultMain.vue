@@ -69,11 +69,7 @@ export default {
 <style lang="scss">
   @import '~/assets/scss/variables';
   .main{
-    //transition: opacity .5s;
-    //opacity: 0;
     background-color: $bgdefault; 
-   // pointer-events: none;
-
   }
 
   .hide{
@@ -89,8 +85,11 @@ export default {
 
 
 
+
+
+
   html{
-    background-color: $bgdefault;
+    //background-color: $bgdefault;
     line-height: $mainLineHeight;
     font-family: $mainFont;
     font-size: $mainFontSize;

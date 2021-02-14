@@ -81,13 +81,9 @@ export default {
 <style lang="scss">
   @import '~/assets/scss/variables';
   .main{
-    //transition: opacity .5s;
-    //opacity: 0;
     background-color: $bgdefault; 
-   // pointer-events: none;
-
   }
-  
+
   .main--pc{
     display: flex;
   }
@@ -244,7 +240,7 @@ export default {
   .loyaut__center-sidebar{
     margin-left: 380px;
     margin-top: 40px;
-    width: 100%;
+   // width: 100%;
     height: auto;
   }
 
@@ -262,7 +258,7 @@ export default {
 
 
   html{
-    background-color: $bgdefault;
+    //background-color: $bgdefault;
     line-height: $mainLineHeight;
     font-family: $mainFont;
     font-size: $mainFontSize;

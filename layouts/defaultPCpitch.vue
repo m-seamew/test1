@@ -1,6 +1,6 @@
 <template>
   <div>
-       <div id="loadcontent" class="main main--pc default-pc__pitch">
+       <div id="loadcontent" class="main main--pc main-pc-black default-pc__pitch">
          <div class="loyaut__left-sidebar">
            <InsidePitchMenu> 
               <currency :bitbonprice="bitbonPrice" :menu__pcCont="styleOfContainer"></currency>
@@ -78,7 +78,6 @@ export default {
         })
         .catch(err => console.log(err));
     
- 
   },
   mounted(){
     this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
@@ -105,9 +104,7 @@ export default {
 <style lang="scss">
   @import '~/assets/scss/variables';
   .main{
-    //transition: opacity .5s;
-    //opacity: 0;
-   // pointer-events: none;
+    
   .blok-wrapper{
     margin: 0;
   }
@@ -117,9 +114,12 @@ export default {
     overflow: hidden;
   }
 
-
   .main--pc{
     display: flex;
+  }
+
+  .main-pc-black{
+     background-color: $backgroundBlack;
   }
 
   .loyaut__right-sidebar{
@@ -309,7 +309,6 @@ export default {
 
 
   html{
-    background-color: $backgroundBlack;
     line-height: $mainLineHeight;
     font-family: $mainFont;
     font-size: $mainFontSize;
