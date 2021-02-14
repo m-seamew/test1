@@ -67,7 +67,6 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'vue-scrollto/nuxt',
-    ['vue-wait/nuxt', { useVuex: true }],
     ['nuxt-font-loader-strategy', { 
       ignoreLighthouse: true,
       ignoredEffectiveTypes: ['2g', 'slow-2g'],
