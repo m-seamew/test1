@@ -1,11 +1,16 @@
 <template>
-  <div class="loading-page" v-if="loading" :class="!loadingAnimation ? 'loading__hide' : null">
+  <div class="loading-page"
+    :class="[
+      !loadingAnimation ? 'loading__hide' : null,
+      !$device.isMobileOrTablet ? 'loading--pc' : null,
+    ]">
     <div class="preloader__container">
       <div class="preloader__logo">
          <img :src="require('~/assets/img/preloader/preloader__logo.svg')" alt="Bitbon Expert" class="preloader__img">
       </div>
       <div class="preloader__subtitle">
-        <client-only>
+        {{$t('preloader.subtitle')}}
+        <!--<client-only>
           <vue-typer 
           :text="$t('preloader.subtitle')"
           :repeat='0'
@@ -14,7 +19,7 @@
           :type-delay='50'
           erase-style='clear'
           ></vue-typer>
-        </client-only>
+        </client-only>-->
       </div> 
     </div>
     <div class="preloader__text-about">
@@ -39,15 +44,16 @@ export default {
       if(this.loadingCheck === true){
         this.loading = true;
       }else if(this.loadingCheck === false){
-        setTimeout(_=>{this.loading = false}, 4500);
-        setTimeout(_=>{this.loadingAnimation = false}, 4000);
+        setTimeout(_=>{this.loading = false}, 500);
+        setTimeout(_=>{this.loadingAnimation = false}, 200);
     }
   }
   },
   mounted(){
     this.$nextTick(()=>{
-      setTimeout(_=>{this.loading = false}, 4500);
-      setTimeout(_=>{this.loadingAnimation = false}, 4000);
+      setTimeout(_=>{
+       this.loading = false}, 500);
+      setTimeout(_=>{this.loadingAnimation = false}, 200);
     })
   }
 }
@@ -70,16 +76,16 @@ export default {
 }
 
 .loading__hide{
-  animation: visibl .5s forwards;
+  animation: visibl .3s forwards;
 }
 
  @keyframes visibl {
   0%   { opacity: 1;
        }
-  20%  {opacity: 0.9;
-        }
+  20%  { opacity: 0.9;
+       }
   100% { opacity: 0;
-        }
+       }
   }
 
 .preloader__text-about{
@@ -91,14 +97,14 @@ export default {
 
 
 .preloader__subtitle{
- 
   margin-top: Max(20px, 9%);
-
   max-width: 18em;
-
   border-left: 5px solid #ffee00;
   padding-left: Max(8px, 3.65%);
   min-height: 2.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #ffffff;
 }
 
 .preloader__container{
@@ -142,5 +148,26 @@ export default {
 
 .vue-typer .custom.caret {
   display: none;
+}
+
+.loading--pc{
+  padding-right: 7px;
+  .preloader__logo{
+  width: 15%;
+  }
+  .preloader__subtitle{
+    font-size: .6em;
+    line-height: 1.3;
+    margin-top: 0;
+  }
+  .preloader__container{
+    display: flex;
+    align-items: center;
+  }
+  .preloader__logo{
+    margin-right: Max(8px, 3.65%);
+  }
+
+  //html {margin-right: calc(-1 * (100vw - 100%));}
 }
 </style>

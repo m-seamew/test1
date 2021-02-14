@@ -26,6 +26,13 @@ export default {
         slug: '/firstpitch3',
         bg_active: ['#848a98', '#333540']
       },
+      {
+        img: 'slide1.jpg',
+        text: 'Обзор проекта Система Bitbon',
+        link: '/firstpitch',
+        slug: '/firstpitch3',
+        bg_active: ['#989784', '#404033']
+      },
     ]
   },
 
@@ -35,20 +42,22 @@ export default {
   },
 
   burger:{
-    points: [
-      {
-        name: 'Название 1',
-        hash: 'test1'
-      },
-      {
-        name: 'Название 2',
-        hash: 'test2'
-      },
-      {
-        name: 'Название 3',
-        hash: 'test3'
-      },
-    ]
+    firstpitch: {
+      points: [
+        {
+          name: 'Название 1',
+          hash: 'test1'
+        },
+        {
+          name: 'Название 2',
+          hash: 'test2'
+        },
+        {
+          name: 'Название 3',
+          hash: 'test3'
+        },
+      ]
+    }
   }
   /*
   test:'ну',

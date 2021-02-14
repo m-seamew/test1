@@ -2,13 +2,16 @@
   <div>
        <div id="loadcontent" class="main main--pc">
          <div class="loyaut__left-sidebar">
-           <Contacts> 
+           <InsidePitchMenu> 
               <currency :bitbonprice="bitbonPrice" :menu__pcCont="styleOfContainer"></currency>
-           </Contacts>
+           </InsidePitchMenu>
          </div>
          <div class="loyaut__center-sidebar">
             <Nuxt :bitbonprice="bitbonPrice"/>
          </div>
+            <div class="loyaut__right-sidebar" :style="styleOfLeftMenu">
+            <MobileMenu></MobileMenu>
+            </div>
          
        </div>       
   </div>
@@ -16,10 +19,11 @@
 
 <script>
 import axios from 'axios';
-import currency from '~/components/interface/components/menuCursLang'
+import currency from '~/components/interface/components/menuCursLang';
+import MobileMenu from '~/components/interface/mobileMenu.vue';
 
 export default {
-  components: {currency},
+  components: {currency, MobileMenu},
   async fetch(){
     await axios
           .get('https://bc-api.bit.trade/api/price?currency=usd')
@@ -37,12 +41,27 @@ export default {
       justifyContent: 'space-around',
       //marginTop: 'Min(50px, 10%)',
       //marginBottom: 'Min(50px, 10%)',
-    }
+    },
+    styleOfLeftMenu:{
+      transform: 'translateY(0)'
+    },
+    tempLeftMenu: 0,
   }),
   methods: {
     checkIfMobile(){
       this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
       this.$store.dispatch('isMobile/changeIsMobile', this.isMobile);
+    },
+    transformY(){
+      if(process.browser){
+          const change = window.pageYOffset + window.innerHeight/2 -100;
+         
+            this.styleOfLeftMenu = {
+              transform: `translateY(${change}px)`,
+            }
+            this.tempLeftMenu = change;
+          
+      } 
     }
   },
   beforeMount(){
@@ -63,6 +82,8 @@ export default {
     this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
     this.$store.dispatch('isMobile/changeIsMobile', this.isMobile)
     window.addEventListener("resize", this.checkIfMobile);
+    window.addEventListener('scroll', this.transformY);
+    this.transformY();
     
     /*setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
 
@@ -74,18 +95,21 @@ export default {
   },
   beforeDestroy(){
     window.removeEventListener('resize', this.checkIfMobile); 
+    window.removeEventListener('scroll', this.transformY);
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '~/assets/scss/variables';
   .main{
     //transition: opacity .5s;
     //opacity: 0;
-    background-color: $bgdefault; 
+    background-color: $backgroundBlack; 
    // pointer-events: none;
-
+  .blok-wrapper{
+    margin: 0;
+  }
   }
 
   html {
@@ -95,6 +119,22 @@ export default {
 
   .main--pc{
     display: flex;
+  }
+
+  .loyaut__right-sidebar{
+   // position: fixed;
+    //top: 50%;
+    //right: 50px;
+    margin-left: 50px;
+    height: 200px;
+    border-radius: 7px;
+    backdrop-filter: blur(3px);
+    background-color: #f3f3f3;
+    //transform: translateY(-50%);
+    width: 200px;
+    transition: transform .75s ease-in-out;
+    transition-delay: .25s;
+    //z-index: 999;
   }
 
   .loyaut__left-sidebar{
@@ -249,7 +289,7 @@ export default {
   .loyaut__center-sidebar{
     margin-left: 380px;
     margin-top: 40px;
-    width: 100%;
+    width: fit-content;
     height: auto;
   }
 
@@ -267,7 +307,7 @@ export default {
 
 
   html{
-    background-color: $bgdefault;
+    background-color: $backgroundBlack;
     line-height: $mainLineHeight;
     font-family: $mainFont;
     font-size: $mainFontSize;
@@ -286,3 +326,64 @@ export default {
   }
 </style>
 
+<style lang="scss">
+  .loyaut__right-sidebar{
+
+  .mobile__menu-container{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    font-size: .5em;
+  }
+
+  .menu__container--menu{
+    display: none;
+    pointer-events: none;
+  }
+
+  .menu__container{
+    margin-right: 0;
+  }
+
+  .mobile__menu{
+    top: auto;
+    bottom: 0;
+    transform: translateY(calc(100% + 14px));
+  }
+
+  .img--button-bitbon {
+    margin-top: -3px;
+    margin-left: 5px;
+    max-width: 20px;
+  }
+
+  .menu__button{
+    display: flex;
+    justify-content: center;
+  }
+
+  .like__continer{
+    margin-bottom: 14px;
+  }
+
+  .like{
+    cursor: pointer;
+  }
+
+  .like:hover{
+    opacity: .9;
+  }
+
+  .like:active{
+    opacity: .7;
+  }
+
+  .mobile__menu-container{
+    height: auto;
+  }
+
+  .menu__button--bitbon{
+    padding: 18.5px 0;
+  }
+  }
+</style>

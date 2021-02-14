@@ -1,12 +1,13 @@
 <template>
-  <div class="container pitch__cont" :class="$device.isMobileOrTablet ? 'pitch__cont--mobile' : null">    
+  <div class="container pitch__cont" :class="$device.isMobileOrTablet ? 'pitch__cont--mobile' : null"> 
+    <Preloader></Preloader>   
+    
     <div class="pitches__container" :class="$device.isMobileOrTablet ? 'pitches__container--mobile' : null">
       <PitchPreviewComponent v-for="(el, index) in columnGen('odd')" :key="index" :data="el"/>
     </div>
     <div class="pitches__container" :class="$device.isMobileOrTablet ? 'pitches__container--mobile' : null">
       <PitchPreviewComponent v-for="(el, index) in columnGen('even')" :key="index" :data="el"/>
     </div>
-    <Preloader></Preloader>
   </div> 
 </template>
 
@@ -53,17 +54,14 @@ export default {
       return res;
     }
   },
-  computed: {
-   
-  },
   mounted(){
-
     this.$nextTick(function () {
       this.$store.dispatch('preloading/changeLoading', false);
-    })
-
-    console.log(this.$route.path);
-
+    });
+    setTimeout(_=>{
+      const cont = document.querySelectorAll('.pitches__container');
+      cont.forEach(el=>el.style.transform = "translateX(0)")
+      }, 501);
   },
   scrollToTop: false,
 }
@@ -90,11 +88,20 @@ export default {
       margin-bottom: 30px;
     }
 
+    .pitches__container:last-child{
+      padding-bottom: 40px;
+    }
+
     .pitches__container--mobile{
       width: 92%;
       flex: 0 0 92%;
       margin-left: 4%;
       margin-right: 4%;
+    }
+    
+    .pitches__container{
+      transform: translateX(-300%);
+      transition: transform .7s linear;
     }
 </style>
 

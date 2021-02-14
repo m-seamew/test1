@@ -86,6 +86,7 @@ export default {
     font-family: 'Roboto Mono', monospace;
     display: flex;
     position: relative;   
+    z-index: 1000;
   }
 
   .header__lang-cont{

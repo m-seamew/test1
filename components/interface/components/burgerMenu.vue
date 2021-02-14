@@ -4,7 +4,7 @@
         <div @click="$emit('closeBurger')">Закрыть</div>
 
         <ul class="burger__menu">
-          <li class="burger__list-item" v-for="(el, index) in tablePoint($t('burger.points'))" :key="index">
+          <li class="burger__list-item" v-for="(el, index) in tablePoint($t('burger.firstpitch.points'))" :key="index">
             <a href="#"
               v-scroll-to="{
                 el:`#${el.hash}`,
