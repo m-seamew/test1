@@ -87,12 +87,7 @@ export default {
    // pointer-events: none;
 
   }
-
-  html {
-    overflow: hidden;
-  }
-
-
+  
   .main--pc{
     display: flex;
   }
