@@ -3,7 +3,7 @@
     <Preloader></Preloader>
 
     <div>
-      <LazyHydrate>
+      <LazyHydrate when-idle>
         <TableBlok/>
       </LazyHydrate>
     </div>
@@ -199,7 +199,7 @@ export default {
       'test2',
       'test3'
     ],
-    lazyOption: { rootMargin: '400px' },
+    lazyOption: { rootMargin: '1000px' },
   }),
   components: {
     Infrastructure1: () => import('~/components/bloks/infrastructure1'),
