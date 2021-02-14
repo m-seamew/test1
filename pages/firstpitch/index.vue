@@ -9,7 +9,7 @@
     </div>
 
     <div id="test1">
-      <LazyHydrate never>
+      <LazyHydrate :when-visible="lazyOption">
         <ChartScreen/>
       </LazyHydrate>
     </div>
@@ -77,12 +77,12 @@
       </LazyHydrate>
     </div>
 
-    <div>
+   <div>
       <LazyHydrate :when-visible="lazyOption">
         <Infrastructure3/>
       </LazyHydrate>
     </div>
- <!----->
+
 
    <div>
       <LazyHydrate :when-visible="lazyOption">
@@ -109,16 +109,9 @@
     </div>
 
 
-    <div>
+     <div>
       <LazyHydrate :when-visible="lazyOption">
-        <Potential/>
-      </LazyHydrate>
-    </div>
-
-
-    <div>
-      <LazyHydrate :when-visible="lazyOption">
-        <Potential/>
+        <Potential></Potential>
       </LazyHydrate>
     </div>
 
@@ -199,9 +192,11 @@ export default {
       'test2',
       'test3'
     ],
-    lazyOption: { rootMargin: '1000px' },
+    lazyOption: { rootMargin: '1000px 0px' },
   }),
   components: {
+    Preloader,
+    LazyHydrate,
     Infrastructure1: () => import('~/components/bloks/infrastructure1'),
     Infrastructure2: () => import('~/components/bloks/infrastructure2'),
     Infrastructure3: () => import('~/components/bloks/infrastructure3'),
@@ -224,9 +219,6 @@ export default {
     Plan1:           () => import('~/components/bloks/plan1'),
     Plan2:           () => import('~/components/bloks/plan2'),
     Potential:       () => import('~/components/bloks/potential'),
-
-    Preloader,
-    LazyHydrate,
   },
   methods: {
     addHashToLocation(hash) {

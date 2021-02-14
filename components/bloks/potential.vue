@@ -1,18 +1,19 @@
 <template>
   <Blok :slide_id="19" :title="$t('potential.title')" :subtitle="$t('potential.subtitle')" :footer_show="false">
-     <client-only>
+    <client-only>
         <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
     </client-only>
     <div class="main__container potential__main-container">
-     
       <div class="potential__chapter">
         <div class="potential__note-cont potential__note-cont--company">
           <div class="note">
             {{$t('potential.chapter_1.text')}}
-           </div>
+          </div>
         </div>
-        <CompanyCompSlider v-if="isMobile"/>
-        <CompanyComp v-else/>
+        <client-only>
+          <CompanyCompSlider v-if="isMobile"/>
+          <CompanyComp v-else/>
+        </client-only>
       </div>
 
       <div class="potential__chapter">
@@ -21,8 +22,10 @@
             {{$t('potential.chapter_2.text')}}
            </div>
         </div>
-        <LogoCountriesSlider v-if="isMobile"/>
-        <LogoCountries v-else/>
+        <client-only>
+          <LogoCountriesSlider v-if="isMobile"/>
+          <LogoCountries v-else/>
+        </client-only>
       </div>
 
       <div class="potential__chapter">
@@ -30,8 +33,10 @@
           <div class="note">
             {{$t('potential.chapter_3.text')}}
            </div>
-           <FondSlider  v-if="isMobile" :data="tablePoint($t('potential.chapter_3.fonds'))"></FondSlider>
-           <Fond v-else :data="tablePoint($t('potential.chapter_3.fonds'))"></Fond>
+          <client-only>
+            <FondSlider v-if="isMobile" :data="tablePoint($t('potential.chapter_3.fonds'))"></FondSlider>
+            <Fond v-else :data="tablePoint($t('potential.chapter_3.fonds'))"></Fond>
+          </client-only>
         </div> 
       </div>
       </div> 

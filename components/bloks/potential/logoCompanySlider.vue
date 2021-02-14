@@ -1,6 +1,6 @@
 <template>
   <client-only>
-  <flickity ref="flickity" :options="flickityOptions" class="potential__logos-container">
+    <flickity ref="flickity" :options="flickityOptions" class="potential__logos-container">
           <div class="potential__logo-container potential__logo-container--microsoft">
             <img class="img__logo-flickity" src="~assets/img/potential/microsoft.png" alt="Microsoft logo">
           </div>
@@ -25,8 +25,8 @@
           <div class="potential__logo-container potential__logo-container--blockfolio">
             <img class="img__logo-flickity" src="~assets/img/potential/blockstream.png" alt="Amazon logo">
           </div>
-    </flickity>
-    </client-only>
+      </flickity>
+  </client-only>
 </template>
 
 <script>

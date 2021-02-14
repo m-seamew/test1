@@ -17,30 +17,34 @@
     </div>
     <div class="potential__logo-item">
       <div class="potential__logo-container--pc potential__logo-container--oracle">
-            <img class="img__logo-flickity" src="~assets/img/potential/oracle.png" alt="Oracle logo">
-        </div>
-        </div>
-        <div class="potential__logo-item">
-        <div class="potential__logo-container--pc potential__logo-container--amazon">
-            <img class="img__logo-flickity" src="~assets/img/potential/amazon.png" alt="Amazon logo">
-        </div>
-        </div>
-        <div class="potential__logo-item">
-        <div class="potential__logo-container--pc potential__logo-container--ibm">
-            <img class="img__logo-flickity" src="~assets/img/potential/ibm.png" alt="Amazon logo">
-        </div>
-        </div>
-        <div class="potential__logo-item">
-        <div class="potential__logo-container--pc potential__logo-container--huawei">
-            <img class="img__logo-flickity" src="~assets/img/potential/huawei.png" alt="Amazon logo">
-        </div>
-        </div>
-        <div class="potential__logo-item">
-        <div class="potential__logo-container--pc potential__logo-container--blockfolio">
-            <img class="img__logo-flickity" src="~assets/img/potential/blockstream.png" alt="Amazon logo">
-        </div>
-        </div>
+        <img class="img__logo-flickity" src="~assets/img/potential/oracle.png" alt="Oracle logo">
       </div>
+    </div>
+        
+    <div class="potential__logo-item">
+      <div class="potential__logo-container--pc potential__logo-container--amazon">
+        <img class="img__logo-flickity" src="~assets/img/potential/amazon.png" alt="Amazon logo">
+      </div>
+    </div>
+
+    <div class="potential__logo-item">
+      <div class="potential__logo-container--pc potential__logo-container--ibm">
+        <img class="img__logo-flickity" src="~assets/img/potential/ibm.png" alt="Amazon logo">
+      </div>
+    </div>
+    
+    <div class="potential__logo-item">
+      <div class="potential__logo-container--pc potential__logo-container--huawei">
+          <img class="img__logo-flickity" src="~assets/img/potential/huawei.png" alt="Amazon logo">
+      </div>
+    </div>
+
+    <div class="potential__logo-item">
+      <div class="potential__logo-container--pc potential__logo-container--blockfolio">
+        <img class="img__logo-flickity" src="~assets/img/potential/blockstream.png" alt="Amazon logo">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

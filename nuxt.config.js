@@ -116,6 +116,7 @@ export default {
   ],
   i18n: {
     strategy: 'prefix_except_default',
+    silentTranslationWarn: process.env.NODE_ENV === 'production',
     vueI18nLoader: true,
     seo: true,
     detectBrowserLanguage: {
@@ -141,7 +142,7 @@ export default {
     langDir:'assets/lang/',
     lazy:true,
   },
-
+  transpile: ['vue-lazy-hydration', 'intersection-observer'],
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     splitChunks: {
