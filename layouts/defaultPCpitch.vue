@@ -1,6 +1,6 @@
 <template>
   <div>
-       <div id="loadcontent" class="main main--pc">
+       <div id="loadcontent" class="main main--pc default-pc__pitch">
          <div class="loyaut__left-sidebar">
            <InsidePitchMenu> 
               <currency :bitbonprice="bitbonPrice" :menu__pcCont="styleOfContainer"></currency>
@@ -102,6 +102,7 @@ export default {
 
 <style lang="scss">
   @import '~/assets/scss/variables';
+  .default-pc__pitch{
   .main{
     //transition: opacity .5s;
     //opacity: 0;
@@ -302,6 +303,7 @@ export default {
    .hide-test{
   // pointer-events: auto;
    opacity: 1;
+    }
   }
 
 
