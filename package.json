@@ -21,6 +21,7 @@
     "nuxt-font-loader-strategy": "^1.1.5",
     "nuxt-i18n": "^6.18.0",
     "vue-flickity": "^1.2.1",
+    "vue-lazy-hydration": "^2.0.0-beta.4",
     "vue-lottie-ssr": "git+https://github.com/serzz1990/vue-lottie.git",
     "vue-plyr": "^7.0.0",
     "vue-scrollto": "^2.20.0",
