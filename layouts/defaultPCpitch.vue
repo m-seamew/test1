@@ -78,11 +78,7 @@ export default {
         })
         .catch(err => console.log(err));
     
-    if(!this.$device.$device.isMobileOrTablet){
-      this.$route.path === '/'
-        ? document.querySelector('html').style.backgroundColor = "#e8e8e8"
-        : document.querySelector('html').style.backgroundColor = "#525659" 
-    } 
+ 
   },
   mounted(){
     this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
