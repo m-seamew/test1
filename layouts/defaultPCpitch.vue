@@ -102,7 +102,6 @@ export default {
 
 <style lang="scss">
   @import '~/assets/scss/variables';
-  .default-pc__pitch{
   .main{
     //transition: opacity .5s;
     //opacity: 0;
@@ -326,12 +325,8 @@ export default {
       font-size: 14px;
     }
   }
-</style>
 
-<style lang="scss">
-  .loyaut__right-sidebar{
-
-  .mobile__menu-container{
+    .mobile__menu-container{
     display: flex;
     flex-direction: column;
     padding: 8px 0;
@@ -387,5 +382,5 @@ export default {
   .menu__button--bitbon{
     padding: 18.5px 0;
   }
-  }
 </style>
+
