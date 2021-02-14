@@ -77,6 +77,12 @@ export default {
           })
         })
         .catch(err => console.log(err));
+    
+    if(!this.$device.$device.isMobileOrTablet){
+      this.$route.path === '/'
+        ? document.querySelector('html').style.backgroundColor = "#e8e8e8"
+        : document.querySelector('html').style.backgroundColor = "#525659" 
+    } 
   },
   mounted(){
     this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
@@ -105,7 +111,6 @@ export default {
   .main{
     //transition: opacity .5s;
     //opacity: 0;
-    background-color: $backgroundBlack; 
    // pointer-events: none;
   .blok-wrapper{
     margin: 0;
