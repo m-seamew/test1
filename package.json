@@ -23,7 +23,7 @@
     "vue-lottie-ssr": "git+https://github.com/serzz1990/vue-lottie.git",
     "vue-plyr": "^7.0.0",
     "vue-scrollto": "^2.20.0",
-    "vue-slick-carousel": "^1.0.6",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxtjs/device": "^2.0.0",
