@@ -303,7 +303,7 @@ export default {
   // pointer-events: auto;
    opacity: 1;
     }
-  }
+  
 
 
 
