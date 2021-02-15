@@ -326,7 +326,8 @@ export default {
     }
   }
 
-    .mobile__menu-container{
+
+  .mobile__menu-container{
     display: flex;
     flex-direction: column;
     padding: 8px 0;

@@ -192,7 +192,7 @@ export default {
       'test2',
       'test3'
     ],
-    lazyOption: { rootMargin: '1000px 0px' },
+    lazyOption: { rootMargin: '2000px' },
   }),
   components: {
     Preloader,
