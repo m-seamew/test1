@@ -1,7 +1,11 @@
 <template>
   <Blok :slide_id="19" :title="$t('potential.title')" :subtitle="$t('potential.subtitle')" :footer_show="false">
     <client-only>
-        <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
+        <img
+          v-lazy="require(`~/assets/img/service/shuttle.png`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon service__bg-icon"
+        >
     </client-only>
     <div class="main__container potential__main-container">
       <div class="potential__chapter">

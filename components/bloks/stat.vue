@@ -2,7 +2,11 @@
   <Blok :slide_id="24" :title="$t('stat.title')" :subtitle="$t('stat.subtitle')" :footer_show="false">
     <article>
     <client-only>
-        <img class="bg-icon stat__bg-icon" src="~assets/img/stat/bgicon.png" alt="">
+        <img  
+          v-lazy="require(`~/assets/img/stat/bgicon.png`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon stat__bg-icon"
+        >
         <Observer @firstobserve="animation"></Observer>
     </client-only>
     <main class="main__container vuvod__main-container">

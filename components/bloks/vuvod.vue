@@ -2,7 +2,11 @@
   <Blok :slide_id="25" :title="$t('vuvod.title')" :subtitle="$t('vuvod.subtitle')" :footer_show="false">
     <article>
     <client-only>
-        <img class="bg-icon vuvod__bg-icon" src="~assets/img/vuvod/bgicon.png" alt="">
+        <img
+          v-lazy="require(`~/assets/img/vuvod/bgicon.png`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon vuvod__bg-icon"
+        >
     </client-only>
     <main class="main__container vuvod__main-container">
       <div class="vuvod__chapter-text" v-html="$t('vuvod.article.chapter_1.text')"></div>
@@ -15,7 +19,12 @@
 
       <div class="vuvod__subnotes-hash-container">
         <div class="subnotes-hash__left-side"> 
-          <img class="img" src="~assets/img/vuvod/obls.jpg" alt="">
+          <img
+            v-lazy="require(`~/assets/img/vuvod/obls.jpg`)"
+            src="~/assets/img/lazyloading.svg"
+            class="img"
+            alt="article"
+          >
         </div>
         <div class="subnotes-hash__right-side">
           <div class="subnotes-text" v-html="$t('vuvod.article.chapter_2.text')"></div>

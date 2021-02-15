@@ -4,11 +4,20 @@
       <div class="chart__chapter" v-html="$t('chart_screen.chapter_1.text')"></div>
     </div>  
     <client-only>
-          <img class="bg-icon chart_screen__bg-icon" src="~assets/img/chartscreen/bgicon.svg" alt="bgicon">
+        <img
+          v-lazy="require('~/assets/img/chartscreen/bgicon.svg')"
+          src="~/assets/img/lazyloading.svg" 
+          class="bg-icon chart_screen__bg-icon"
+          alt="bgicon"
+        >
     </client-only>
 
     <div class="chart-container">
-      <img :src="require(`~/assets/img/${$t('chart_screen.chart')}`)" alt="chart" class="img chart">
+      <img v-lazy="require(`~/assets/img/${$t('chart_screen.chart')}`)"
+           src="~/assets/img/lazyloading.svg"
+           alt="chart"
+           class="img chart"
+      >
     </div>
     <div class="main__container">
       <Subnotes :text="$t('chart_screen.subnotes')" :MaxWidth="60"></Subnotes>

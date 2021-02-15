@@ -44,7 +44,8 @@ export default {
     { src: '~plugins/vueLottie.js', mode: 'client'},
     { src: '~plugins/preloader-typer.js', mode: 'client'},
     { src: './plugins/flickity.js', ssr: false},
-    { src: './plugins/videoplayer.js', mode: 'client' }
+    { src: './plugins/videoplayer.js', mode: 'client' },
+    '~/plugins/vue-lazyload'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -62,7 +63,11 @@ export default {
       }
     }],
   ['@nuxtjs/device'],
+  '@aceforth/nuxt-optimized-images',
   ],
+  optimizedImages: {
+    optimizeImages: true
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -116,7 +121,7 @@ export default {
   ],
   i18n: {
     strategy: 'prefix_except_default',
-    silentTranslationWarn: process.env.NODE_ENV === 'production',
+    silentTranslationWarn: true,
     vueI18nLoader: true,
     seo: true,
     detectBrowserLanguage: {
@@ -147,7 +152,9 @@ export default {
   build: {
     splitChunks: {
       layouts: true
-    }
+    },
+    cssSourceMap: true,
+    extractCSS: true,
   },
   //router: { middleware: ['cusstomroutes'] },
 }

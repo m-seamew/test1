@@ -1,12 +1,21 @@
 <template>
   <Blok :slide_id="6" :title="$t('token_1.title')" :subtitle="$t('token_1.subtitle')" :footer_show="false">
     <client-only>
-        <img class="bg-icon token__bg-icon" src="~assets/img/token1/bgicon.svg" alt="Bitbon logo">
+        <img
+          v-lazy="require(`~/assets/img/token1/bgicon.svg`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon token__bg-icon"
+        >
     </client-only>
     <div class="main__container token__main-container">
       <div class="token__container-with-logo">
           <div class="token__logo-cont">
-            <img src="~assets/img/token1/logotoken.png" alt="Bitbon Token" class="img">
+            <img
+              v-lazy="require(`~/assets/img/token1/logotoken.png`)"
+              src="~/assets/img/lazyloading.svg"
+              alt="Bitbon Token"
+              class="img"
+            >
           </div>
           <div class="div token__chapter" v-html="$t('token_1.chapter_1.text')"></div>
       </div> 
@@ -14,7 +23,12 @@
         <div class="token__point">
           <div class="token__point-header">
             <div class="point-header__cont">
-              <img src="~assets/img/token1/key.png" alt="Key" class="img">
+              <img
+                v-lazy="require(`~/assets/img/token1/key.png`)"
+                src="~/assets/img/lazyloading.svg"
+                alt="Key"
+                class="img"
+              >
               <div class="point-header__icon">
                   <div class="round round--1">1</div>
               </div>
@@ -28,7 +42,12 @@
         <div class="token__point">
           <div class="token__point-header">
             <div class="point-header__cont">
-              <img src="~assets/img/token1/diamond.png" alt="Key" class="img">
+              <img
+                v-lazy="require(`~/assets/img/token1/diamond.png`)"
+                src="~/assets/img/lazyloading.svg"
+                alt="Key"
+                class="img"
+              >
               <div class="point-header__icon">
                   <div class="round">2</div>
               </div>

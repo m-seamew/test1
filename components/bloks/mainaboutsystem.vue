@@ -8,7 +8,12 @@
      <article>
       <main>
         <client-only>
-          <img class="bg-icon about__bg-icon" src="~assets/img/aboutsystem/bgicon.png" alt="bgicon">
+          <img
+            v-lazy="require(`~/assets/img/aboutsystem/bgicon.png`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon about__bg-icon"
+            alt="bgicon"
+          >
         </client-only>
         <div class="main__container">
           <div class="note about__note">
@@ -19,13 +24,23 @@
           </div>
            <div class="about__chapter about__chapter--withimg-position">
             <div class="about__img-container">
-              <img src="~assets/img/aboutsystem/hand.png" alt="hand" class="img">
+              <img
+                v-lazy="require(`~/assets/img/aboutsystem/hand.png`)"
+                src="~/assets/img/lazyloading.svg"
+                alt="hand"
+                class="img"
+              >
             </div>
             <div class="about-chapter-text" v-html="$t('mainaboutsystem.chapter_1')"></div> 
           </div>
           <div class="about__chapter about__chapter--withimg-position">
             <div class="about__img-container">
-              <img src="~assets/img/aboutsystem/smile.png" alt="hand" class="img">
+              <img
+                v-lazy="require(`~/assets/img/aboutsystem/smile.png`)"
+                src="~/assets/img/lazyloading.svg"
+                alt="hand"
+                class="img"
+              >
             </div>
             <div class="about-chapter-text" v-html="$t('mainaboutsystem.chapter_2')"></div> 
           </div>

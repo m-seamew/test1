@@ -28,6 +28,7 @@
 
     <footer class="blok-footer">
       <a v-show="footer_show" :href='`https://bitbon.today/${link}/`' class="blok-footer__link">www.bitbon.today</a>
+      
       <img src="~assets/img/bloktemplate/blockfooter.svg" alt="bitbon today" class="blok-footer__img">
     </footer>
   </section>

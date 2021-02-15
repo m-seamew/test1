@@ -155,3 +155,13 @@ body{
 .padding-bottom-fix{
   padding-bottom: 150px;
 }
+
+
+img[lazy=loading] {
+  opacity: 0;
+}
+
+img[lazy=loaded] {
+  opacity: 1;
+  transition: opacity .5s;
+}

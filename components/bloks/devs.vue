@@ -2,13 +2,22 @@
   <Blok :slide_id="8" :title="$t('devs.title')" :subtitle="$t('devs.subtitle')" :footer_show="false">
     <article>
     <client-only>
-        <img class="bg-icon devs__bg-icon" src="~assets/img/devs/bgicon.png" alt="">
+        <img 
+          v-lazy="require(`~/assets/img/devs/bgicon.png`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon devs__bg-icon"
+        >
     </client-only>
 
     <main class="main__container devs__main-container">
       <div class="container--with-logo">
           <div class="logo__container logo__container--devs">
-            <img src="~assets/img/devs/simcord.png" alt="Simcord company" class="img">
+            <img 
+              v-lazy="require(`~/assets/img/devs/simcord.png`)"
+              src="~/assets/img/lazyloading.svg"
+              alt="Simcord company"
+              class="img"
+            >
           </div>
           <div class="chapter__container-line chapter__container-line--devs" v-html="$t('devs.article.chapter_1.text')"></div>
       </div> 

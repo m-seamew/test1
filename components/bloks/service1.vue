@@ -1,7 +1,11 @@
 <template>
   <Blok :slide_id="6" :title="$t('service_1.title')" :subtitle="$t('service_1.subtitle')" :footer_show="false">
      <client-only>
-        <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
+        <img
+          v-lazy="require(`~/assets/img/service/shuttle.png`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon service__bg-icon"
+        >
     </client-only>
     <div class="main__container token__main-container">
       <div class="token__container-with-logo service__container-with-logo">
@@ -13,7 +17,12 @@
       <div class="service__chapter" v-html="$t('service_1.chapter_2')"></div>
       <div class="token__container-with-logo">
           <div class="service__img-cont">
-            <img src="~assets/img/service/services2.png" alt="Services Bitbon" class="img service__img--2">
+            <img
+              v-lazy="require(`~/assets/img/service/services2.png`)"
+              src="~/assets/img/lazyloading.svg"
+              alt="Services Bitbon"
+              class="img service__img--2"
+            >
           </div>
           <div class="service__chapter-text" v-html="$t('service_1.chapter_3.text')"></div>
       </div> 

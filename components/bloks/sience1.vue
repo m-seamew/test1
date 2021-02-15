@@ -9,7 +9,12 @@
      <article>
       <main>
         <client-only>
-          <img class="bg-icon sience1__bg-icon" src="~assets/img/sience/bgicon.svg" alt="bgicon">
+          <img
+            v-lazy="require(`~/assets/img/sience/bgicon.svg`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon sience1__bg-icon"
+            alt="bgicon"
+          >
         </client-only>
         <div class="main__container">
           <div class="note sience__note">
@@ -18,13 +23,17 @@
            <div class="sience__chapter sience__chapter--withimg-position"
             v-for="(el, index) in tablePoint($t('sience1.chapters'))" :key="index">
             <div class="siecne__img-container">
-              <img :src='require(`~/assets/img/${el.img}`)' alt="document" class="img">
+              <img
+                v-lazy="require(`~/assets/img/${el.img}`)"
+                src="~/assets/img/lazyloading.svg"
+                alt="document"
+                class="img"
+              >
             </div>
             <div class="sience__chapter-text-cont">
               <h4 class="sience__chapter-header">{{el.header}}</h4>
               <div class="sience__chapter-text" v-html="el.text"></div> 
             </div>
-            
           </div>
         </div>
       </main> 

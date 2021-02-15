@@ -9,7 +9,11 @@
   <transition name="fade" mode="out-in">  
     <div class="sience4__video-container" v-if="video.book.isOpen === true">
         <div class="video__close" @click="video.book.isOpen = false">
-          <img src="~assets/img/close.svg" class="video__close-img"/>
+          <img
+             v-lazy="require(`~/assets/img/close.svg`)"
+             src="~/assets/img/lazyloading.svg"
+             class="video__close-img"
+          />
         </div>
         <Player :options="options" :source="video.book.source" :poster="video.book.poster"></Player>
     </div>
@@ -18,8 +22,16 @@
      <article>
       <main>
         <client-only>
-          <img class="bg-icon sience1__bg-icon" src="~assets/img/sience/bgicon.svg" alt="bgicon">
-          <img class="bg-icon sience4__bg-icon-footer" src="~assets/img/sience/gnost41.png" alt="bgicon">
+          <img
+            v-lazy="require(`~/assets/img/sience/bgicon.svg`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon sience1__bg-icon"
+          >
+          <img
+            v-lazy="require(`~/assets/img/sience/gnost41.png`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon sience4__bg-icon-footer"
+          >
         </client-only>
         <div class="main__container sience4__container">
 
@@ -31,10 +43,20 @@
           <div class="sience4__left">
             <div class="video__container">
               <div class="video__img-container">
-                <img src="~assets/img/sience/video.png" alt="video" class="img">
+                <img
+                  v-lazy="require(`~/assets/img/sience/video.png`)"
+                  src="~/assets/img/lazyloading.svg"
+                  alt="video"
+                  class="img"
+                >
                 <div class="video__button-container">
                   <div class="video__button" @click="video.book.isOpen = true">
-                    <img src="~assets/img/sience/video__button.svg" alt="play" class="img">
+                    <img
+                      v-lazy="require(`~/assets/img/sience/video__button.svg`)"
+                      src="~/assets/img/lazyloading.svg"
+                      alt="play"
+                      class="img"
+                    >
                   </div>
                 </div>
               </div>
@@ -46,10 +68,20 @@
 
             <div class="video__container video__container--padding-top">
               <div class="video__img-container">
-                <img src="~assets/img/sience/video1.jpg" alt="video" class="img">
+                <img
+                  v-lazy="require(`~/assets/img/sience/video1.jpg`)"
+                  src="~/assets/img/lazyloading.svg"
+                  alt="video"
+                  class="img"
+                >
                 <div class="video__button-container">
                   <div class="video__button">
-                    <img src="~assets/img/sience/video__button.svg" alt="play" class="img">
+                    <img
+                      v-lazy="require(`~/assets/img/sience/video__button.svg`)"
+                      src="~/assets/img/lazyloading.svg"
+                      alt="play"
+                      class="img"
+                    >
                   </div>
                 </div>
               </div>
@@ -64,7 +96,12 @@
 
             <div class="sience4__chapter">
               <div class="sience4__chapter-img">
-                <img src="~assets/img/sience/zakon.png" alt="zakon" class="img">
+                <img
+                  v-lazy="require(`~/assets/img/sience/zakon.png`)"
+                  src="~/assets/img/lazyloading.svg"
+                  alt="zakon"
+                  class="img"
+                >
               </div>
               <div class="sience4__chapter-text-container">
                 <div class="sience4__chapter-header bold">{{$t('sience4.product_3.header')}}</div>

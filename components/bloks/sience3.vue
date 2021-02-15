@@ -9,13 +9,22 @@
      <article>
       <main>
         <client-only>
-          <img class="bg-icon sience1__bg-icon" src="~assets/img/sience/bgicon.svg" alt="bgicon">
+          <img  
+            v-lazy="require(`~/assets/img/sience/bgicon.svg`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon sience1__bg-icon"
+          >
         </client-only>
         <div class="main__container">
            <div class="sience__chapter sience__chapter--withimg-position"
             v-for="(el, index) in tablePoint($t('sience3.chapters'))" :key="index">
             <div class="siecne__img-container">
-              <img :src='require(`~/assets/img/${el.img}`)' alt="document" class="img">
+              <img
+                 v-lazy="require(`~/assets/img/${el.img}`)"
+                 src="~/assets/img/lazyloading.svg"
+                 alt="document"
+                 class="img"
+              >
             </div>
             <div class="sience__chapter-text-cont">
               <h4 class="sience__chapter-header">{{el.header}}</h4>
@@ -25,7 +34,12 @@
           <div class="sience__chapter sience__chapter--position-slide3 sience__chapter--header" v-html="$t('sience3.article')"></div>
            <div class="sience__chapter sience__chapter--float sience__chapter--withimg-position sience__chapter--wrap">
             <div class="siecne__img-container siecne__img-container--big">
-              <img :src="require(`~/assets/img/${$t('sience3.chapter2.img')}`)" alt="document" class="img">
+              <img
+                 v-lazy="require(`~/assets/img/${$t('sience3.chapter2.img')}`)"
+                 src="~/assets/img/lazyloading.svg"
+                 alt="document"
+                 class="img"
+              >
             </div>
             <div class="sience__chapter-text-cont">
               <h4 class="sience__chapter-header sience__chapter-header--big">{{$t("sience3.chapter2.header")}}</h4>

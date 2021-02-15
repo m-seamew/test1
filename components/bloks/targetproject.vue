@@ -3,7 +3,11 @@
     <div class="main__container">
       <div class="target__container-with-logo">
           <div class="target__logo-cont">
-            <img src="~assets/img/targetproject/logobitbon.svg" alt="Bitbon System" class="img">
+            <img
+              v-lazy="require(`~/assets/img/targetproject/logobitbon.svg`)"
+              src="~/assets/img/lazyloading.svg"
+              class="img"
+            >
           </div>
           <div class="div chart_screen__chapter" v-html="$t('target_project.chapter_1.text')"></div>
       </div> 
@@ -21,8 +25,16 @@
         
     </div>  
     <client-only>
-          <img class="bg-icon target__bg-icon" src="~assets/img/targetproject/bgicon.svg" alt="bgicon">
-          <img src="~assets/img/targetproject/pick.png" alt="Bitbon Ghost character" class="bg-icon target__pick-icon">
+          <img
+            v-lazy="require(`~/assets/img/targetproject/bgicon.svg`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon target__bg-icon"
+          >
+          <img 
+            v-lazy="require(`~/assets/img/targetproject/pick.png`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon target__pick-icon"
+          >
     </client-only>
     <div class="main__container">
       

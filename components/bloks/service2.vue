@@ -1,14 +1,23 @@
 <template>
   <Blok :slide_id="6" :title="$t('service_2.title')" :subtitle="$t('service_2.subtitle')" :footer_show="false" :first="false">
     <client-only>
-        <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
+        <img
+          v-lazy="require(`~/assets/img/service/shuttle.png`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon service__bg-icon"
+        >
     </client-only>
     <article class="main__container service2__main-container">
       <div class="token__container-with-logo service__container-with-logo service__container-wrap">
           <div class="service__img-cont--service2">
             <div class="service__img-header--service2">
               <div class="service__img-cont--world">
-                 <img class="img service__img--world" src="~assets/img/service/world.png" alt="world">
+                 <img
+                    v-lazy="require(`~/assets/img/service/world.png`)"
+                    src="~/assets/img/lazyloading.svg"
+                    class="img service__img--world"
+                    alt="world" 
+                 >
               </div>
               <div class="service__text-header--service2" v-html="$t('service_2.chapter_1.img-text')"></div>
             </div>
@@ -26,7 +35,12 @@
           <div class="service__img-cont--service2">
             <div class="service__img-header--service2">
               <div class="service__img-cont--world">
-                 <img class="img service__img--money" src="~assets/img/service/money.png" alt="world">
+                 <img
+                  v-lazy="require(`~/assets/img/service/money.png`)"
+                  src="~/assets/img/lazyloading.svg"
+                  class="img service__img--money"
+                  alt="world"
+                 >
               </div>
               <div class="service__text-header--service2" v-html="$t('service_2.chapter_3.img-text')"></div>
             </div>

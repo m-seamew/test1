@@ -2,7 +2,11 @@
   <Blok :slide_id="23" :title="$t('plan_2.title')" :subtitle="$t('plan_2.subtitle')" :footer_show="false" :first="false">
     <article>
     <client-only>
-        <img class="bg-icon plan__bg-icon" src="~assets/img/plan/bgicon.png" alt="">
+        <img
+          v-lazy="require(`~/assets/img/plan/bgicon.png`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon plan__bg-icon"
+        >
         <Observer @firstobserve="animation"></Observer>
     </client-only>
     <main class="main__container plan__main-container">

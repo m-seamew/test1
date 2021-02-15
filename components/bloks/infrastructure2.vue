@@ -9,7 +9,11 @@
       <article>
         <div class="infrastructure-chapter">
           <div class="infrastructure-chapter__img-container">
-            <img src="~assets/img/infrastructure/server.png" alt="server" class="infrastructure-chapter__img">
+            <img
+            v-lazy="require(`~/assets/img/infrastructure/server.png`)"
+            src="~/assets/img/lazyloading.svg"
+            alt="server"
+            class="infrastructure-chapter__img">
           </div>
           <div class="infrastructure-chapter__text-container">
             <h3 class="subtitle">{{$t('infrastructure2slide.article.chapter1.title')}}</h3>
@@ -18,16 +22,27 @@
         </div>
       <client-only>
         <div style="clear:both" v-show="checkSize"></div>
-        <img class="bg-icon infrastructure__bg-icon" src="~assets/img/infrastructure/bgicon.svg" alt="">
+        <img
+          v-lazy="require(`~/assets/img/infrastructure/bgicon.svg`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon infrastructure__bg-icon"
+        >
       </client-only>
       <div class="infrastructure-chapter">
         <div class="infrastructure-chapter__img-container infrastructure-chapter__img-container--left">
-          <img src="~assets/img/infrastructure/building.png" alt="building" class="infrastructure-chapter__img">
+          <img
+            v-lazy="require(`~/assets/img/infrastructure/building.png`)"
+            src="~/assets/img/lazyloading.svg"
+            alt="building"
+            class="infrastructure-chapter__img"
+          >
         </div>
         <div class="infrastructure-chapter__text-container">
-          <h3 class="subtitle infrastructure-chapter__subtitle--50pxdown">{{$t('infrastructure2slide.article.chapter2.title')}}</h3>
-            <div v-html="$t('infrastructure2slide.article.chapter2.text')"></div>
-          </div>  
+          <h3 class="subtitle infrastructure-chapter__subtitle--50pxdown">
+            {{$t('infrastructure2slide.article.chapter2.title')}}
+          </h3>
+          <div v-html="$t('infrastructure2slide.article.chapter2.text')"></div>
+        </div>  
       </div>  
     </article>
   </Blok>

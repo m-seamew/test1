@@ -1,7 +1,11 @@
 <template>
   <Blok :slide_id="6" :title="$t('token_2.title')" :subtitle="$t('token_2.subtitle')" :footer_show="false" :first="false">
     <client-only>
-        <img class="bg-icon token__bg-icon" src="~assets/img/token1/bgicon.svg" alt="Bitbon logo">
+        <img
+          v-lazy="require(`~/assets/img/token1/bgicon.svg`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon token__bg-icon"
+        >
     </client-only>
     <article>
       <main>
@@ -10,7 +14,12 @@
            <div class="token__point">
              <div class="token__point-header">
                 <div class="point-header__cont">
-                  <img src="~assets/img/token1/ghost.png" alt="Ghost" class="img">
+                  <img
+                     v-lazy="require(`~/assets/img/token1/ghost.png`)"
+                     src="~/assets/img/lazyloading.svg"
+                     alt="Ghost"
+                     class="img"
+                  >
                   <div class="point-header__icon">
                     <div class="round">3</div>
                   </div>
@@ -22,7 +31,12 @@
            <div class="token__point">
               <div class="token__point-header">
                 <div class="point-header__cont">
-                  <img src="~assets/img/token1/money.png" alt="Money" class="img">
+                  <img
+                     v-lazy="require(`~/assets/img/token1/money.png`)"
+                     src="~/assets/img/lazyloading.svg"
+                     alt="Money"
+                     class="img"
+                  >
                   <div class="point-header__icon">
                       <div class="round">4</div>
                   </div>

@@ -183,7 +183,7 @@ export default {
   .menu__container--menu{
     flex: 0 0 47px;
   }
-
+/*
   @media (min-width: 1300px) {
     
   .mobile__menu-container{
@@ -242,6 +242,6 @@ export default {
   .menu__button--bitbon{
     padding: 18.5px 0;
   }
-  }
+  }*/
 
 </style>

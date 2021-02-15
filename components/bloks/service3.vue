@@ -1,15 +1,28 @@
 <template>
   <Blok :slide_id="6" :title="$t('service_3.title')" :subtitle="$t('service_3.subtitle')" :footer_show="false" :first="false">
     <client-only>
-        <img class="bg-icon service__bg-icon" src="~assets/img/service/shuttle.png" alt="Bitbon logo">
-        <img class="bg-icon service__bg-img--left-bottom" src="~assets/img/service/service3_img.png" alt="Bitbon Ghost">
+        <img
+            v-lazy="require(`~/assets/img/service/shuttle.png`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon service__bg-icon"
+        >
+        <img
+            v-lazy="require(`~/assets/img/service/service3_img.png`)"
+            src="~/assets/img/lazyloading.svg"
+            class="bg-icon service__bg-img--left-bottom"
+        >
     </client-only>
     <article class="main__container service2__main-container">
       <div class="token__container-with-logo service__container-with-logo">
           <div class="service__img-cont--service3">
             <div class="service__img-header--service2 service__text-header--mb">
               <div class="service__img-cont--world">
-                 <img class="img service__img--hand" src="~assets/img/service/hand.png" alt="hand">
+                 <img
+                   v-lazy="require(`~/assets/img/service/hand.png`)"
+                   src="~/assets/img/lazyloading.svg"
+                   class="img service__img--hand"
+                   alt="hand"
+                 >
               </div>
               <div class="service__text-header--service2" v-html="$t('service_3.chapter_1.img-text')"></div>
             </div>
@@ -21,7 +34,12 @@
           <div class="service__img-cont--service3">
             <div class="service__img-header--service2 service__text-header--mb">
               <div class="service__img-cont--world"> 
-                 <img class="img service__img--contract" src="~assets/img/service/contract.png" alt="smart contract">
+                 <img
+                   v-lazy="require(`~/assets/img/service/contract.png`)"
+                   src="~/assets/img/lazyloading.svg"
+                   class="img service__img--contract"
+                   alt="smart contract"
+                 >
               </div>
               <div class="service__text-header--service2" v-html="$t('service_3.chapter_2.img-text')"></div>
             </div>

@@ -6,28 +6,45 @@
     :first="false"
     :footer_show="false">
       
-      <article>
-      <div class="infrastructure-chapter infrastructure-chapter__second-inf3  infrastructure-chapter__second-inf3--position
-      ">
-          <div class="infrastructure-chapter__text-container infrastructure-chapter__text-container--inf3-1">
-                  <h3 class="subtitle">{{$t('infrastructure3slide.article.chapter1.title')}}</h3>   
-            <div v-html="$t('infrastructure3slide.article.chapter1.text')"></div>
-          </div>
-          <div class="infrastructure-chapter__img-container infrastructure-chapter__img-container--inf3-1">
-            <img src="~assets/img/infrastructure/app.png" alt="bitbon space symbol" class="infrastructure-chapter__img">
+    <article>
+      <div class="infrastructure-chapter infrastructure-chapter__second-inf3  infrastructure-chapter__second-inf3--position">
+        <div class="infrastructure-chapter__text-container infrastructure-chapter__text-container--inf3-1">
+          <h3 class="subtitle">
+            {{$t('infrastructure3slide.article.chapter1.title')}}
+          </h3>   
+          <div v-html="$t('infrastructure3slide.article.chapter1.text')"></div>
+        </div>
+        <div class="infrastructure-chapter__img-container infrastructure-chapter__img-container--inf3-1">
+          <img
+            v-lazy="require(`~/assets/img/infrastructure/app.png`)"
+            src="~/assets/img/lazyloading.svg"
+            alt="bitbon space symbol"
+            class="infrastructure-chapter__img"
+          >
           </div>
       </div>
       <client-only>
-        <img class="bg-icon infrastructure__bg-icon" src="~assets/img/infrastructure/bgicon.svg" alt="">
+        <img
+          v-lazy="require(`~/assets/img/infrastructure/bgicon.svg`)"
+          src="~/assets/img/lazyloading.svg"
+          class="bg-icon infrastructure__bg-icon"
+        >
       </client-only>
       <div class="infrastructure-chapter infrastructure-chapter__second-inf3 infrastructure-chapter__text-container--inf3-1--position">
-          <div class="infrastructure-chapter__img-container infrastructure-chapter__img-container--inf3-1">
-            <img src="~assets/img/infrastructure/graph.jpg" alt="bitbon trade" class="infrastructure-chapter__img">
-          </div>
-          <div class="infrastructure-chapter__text-container infrastructure-chapter__text-container--inf3-2">
-                  <h3 class="subtitle">{{$t('infrastructure3slide.article.chapter2.title')}}</h3>   
-            <div v-html="$t('infrastructure3slide.article.chapter2.text')"></div>
-          </div>
+        <div class="infrastructure-chapter__img-container infrastructure-chapter__img-container--inf3-1">
+          <img 
+            v-lazy="require(`~/assets/img/infrastructure/graph.jpg`)"
+            src="~/assets/img/lazyloading.svg"
+            alt="bitbon trade"
+            class="infrastructure-chapter__img"
+          >
+        </div>
+        <div class="infrastructure-chapter__text-container infrastructure-chapter__text-container--inf3-2">
+          <h3 class="subtitle">
+            {{$t('infrastructure3slide.article.chapter2.title')}}
+          </h3>   
+          <div v-html="$t('infrastructure3slide.article.chapter2.text')"></div>
+        </div>
       </div>
     </article>
   </Blok>
