@@ -4,7 +4,7 @@
         <div @click="$emit('closeBurger')">Закрыть</div>
 
         <ul class="burger__menu">
-          <li class="burger__list-item" v-for="(el, index) in tablePoint($t('burger.firstpitch.points'))" :key="index">
+          <li class="burger__list-item" v-for="(el, index) in checkElementIfIs(tablePoint($t('burger.firstpitch.points')))" :key="index">
             <a href="#"
               v-scroll-to="{
                 el:`#${el.hash}`,
@@ -12,7 +12,7 @@
                 offset: -50,
                 duration: 500,
                 cancelable: false,
-              }" class="burger__list-link" @click="$emit('closeBurger')">{{el.name}}</a>
+              }" class="burger__list-link">{{el.name}}</a>
           </li>
         </ul>
     </div>
@@ -38,6 +38,16 @@ export default {
     },
     menuFixFinish(){
         setTimeout(()=>{ this.$emit('bottomMenuFix', false)}, 0)
+        this.$emit('closeBurger');
+    },
+    checkElementIfIs(arr){
+      if(process.browser){
+      const res = [];
+      arr.forEach(el=>{
+        document.querySelector(`#${el.hash}`) !== null ? res.push(el) : null;
+      })
+      return res;
+      }
     }
   },
   watch:{

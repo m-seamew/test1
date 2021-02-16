@@ -18,7 +18,11 @@
       <div class="menu__button menu__button--bitbon menu__container">
         <a class="mobile__link" href="#"></a>
         <div class="menu__button-text menu__button-text--bitbon">Bitbon +</div>
-        <img :src="require('~/assets/img/menu/gift.svg')" alt="gift" class="img img--button-bitbon">
+  <div class="test__container-fix">
+<img :src="require('~/assets/img/menu/gift.svg')" alt="gift" class="img img--button-bitbon" width="20px" height="20px">
+  </div>
+            
+        
       </div>
     </div>
   </div>
@@ -76,8 +80,10 @@ export default {
       return this.$store.getters['stat/getStat'].firstPitchLike;
     }
   },
-  mounted(){
+  beforeMount(){
     this.$fire.databaseReady();
+  },
+  mounted(){
     this.$nextTick(()=>{
       const tempIsLike = localStorage.getItem('isLike');
       if(tempIsLike !== undefined && tempIsLike == "true") {
@@ -91,6 +97,7 @@ export default {
 
 <style lang="scss">
   @import '~/assets/scss/variables';
+
 
   .mobile__menu{
     position: absolute;
@@ -183,6 +190,14 @@ export default {
   .menu__container--menu{
     flex: 0 0 47px;
   }
+
+
+  .test__container-fix img {
+   width: 100%;
+   height: auto;
+   aspect-ratio: 20 / 19;
+  } 
+
 /*
   @media (min-width: 1300px) {
     

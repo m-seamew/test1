@@ -86,6 +86,7 @@ export default {
 
   .main--pc{
     display: flex;
+    min-height: 100vh;
   }
 
   .loyaut__left-sidebar{

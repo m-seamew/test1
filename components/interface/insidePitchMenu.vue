@@ -20,7 +20,7 @@
                 <a class="footer__link" :href="el.link"></a>
                 <div class="inside-menu__slide-item">
                   <div class="footer__img-container inside-menu__img-container">
-                    <img :src='require(`~/assets/img/footer/${el.img}`)' alt="menu point" class="img">
+                    <img :src='require(`~/assets/img/footer/${el.img}`)' alt="menu point" width="90px" height="90px">
                   </div>
                   <div class="inside-menu__slide-text">{{el.text}}</div>
                 </div>
@@ -64,7 +64,6 @@ export default {
       const arr = [...document.querySelectorAll('.inside-menu__slide-container')];
       const index = arr.indexOf(document.querySelector('.footer__slide-container--active'));
       const data = this.$t('footer.menu');
-      console.log(arr, index, data);
       arr.forEach(el => {
         if(el.classList.contains('footer__slide-container--active')){
           el.style.backgroundImage = this.createActiveStyles(data[index].bg_active).backgroundImage;

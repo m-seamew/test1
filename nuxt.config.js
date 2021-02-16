@@ -4,7 +4,7 @@ export default {
     title: 'blog',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      { name: 'viewport', content: 'width=device-width; initial-scale=1.0;'},
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
@@ -149,12 +149,32 @@ export default {
   },
   transpile: ['vue-lazy-hydration', 'intersection-observer'],
   // Build Configuration (https://go.nuxtjs.dev/config-build)
+  html: {
+    minify: {
+      collapseBooleanAttributes: true,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      processConditionalComments: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+      trimCustomFragments: true,
+      useShortDoctype: true
+    }
+  },
+
   build: {
     splitChunks: {
       layouts: true
     },
     cssSourceMap: true,
     extractCSS: true,
+    html: {
+    minify: {
+        minifyCSS: false,
+        minifyJS: false,
+    }
   },
   //router: { middleware: ['cusstomroutes'] },
+  }
 }

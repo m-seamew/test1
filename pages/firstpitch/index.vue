@@ -2,19 +2,19 @@
   <div class="container">
     <Preloader></Preloader>
 
-    <div>
+    <div id="start">
       <LazyHydrate when-idle>
         <TableBlok/>
       </LazyHydrate>
     </div>
 
-    <div id="test1">
+    <div id="ipo">
       <LazyHydrate :when-visible="lazyOption">
         <ChartScreen/>
       </LazyHydrate>
     </div>
 
-    <div>
+    <div id="fondirovanie">
       <LazyHydrate :when-visible="lazyOption">
         <Mainaboutsystem/>
       </LazyHydrate>
@@ -145,38 +145,6 @@
 </template>
 
 <script>
-/*
-import Infrastructure1 from '~/components/bloks/infrastructure1';
-import Infrastructure2 from '~/components/bloks/infrastructure2';
-import Infrastructure3 from '~/components/bloks/infrastructure3';
-
-import TableBlok from '~/components/bloks/tablecomp';
-import Mainaboutsystem from '~/components/bloks/mainaboutsystem';
-import ChartScreen from '~/components/bloks/chartscreen';
-
-import TargetProject from '~/components/bloks/targetproject';
-import Token1 from '~/components/bloks/token1';
-import Token2 from '~/components/bloks/token2';
-
-import Sience1 from '~/components/bloks/sience1';
-import Sience2 from '~/components/bloks/sience2';
-import Sience3 from '~/components/bloks/sience3'; 
-import Sience4 from '~/components/bloks/sience4'; 
-
-import Service1 from '~/components/bloks/service1';
-import Service2 from '~/components/bloks/service2';
-import Service3 from '~/components/bloks/service3'; 
-
-
-import Devs from '~/components/bloks/devs'; 
-
-import Vuvod from '~/components/bloks/vuvod';
-import Stat from '~/components/bloks/stat.vue';
-import Plan1 from '~/components/bloks/plan1';
-import Plan2 from '~/components/bloks/plan2';
-
-import Potential from '~/components/bloks/potential';*/
-
 import layoutMiddleware from '@/middleware/layoutMiddleware';
 import Preloader from '~/components/loading';
 import LazyHydrate from 'vue-lazy-hydration';
@@ -187,11 +155,7 @@ export default {
   data: () => ({
     lang: 'ru',
     observer: {},
-    id: [
-      'test1',
-      'test2',
-      'test3'
-    ],
+    id: [],
     lazyOption: { rootMargin: '2000px' },
   }),
   components: {
@@ -222,13 +186,15 @@ export default {
   },
   methods: {
     addHashToLocation(hash) {
-      location.hash = hash;
+      history.pushState(null, null, '#' + hash);
+      this.$store.dispatch('locationhash/changeHash', hash);
     }
   },
   scrollToTop: false,
-  beforeMount(){
-  },
   mounted(){
+    const location = window.location.hash.replace('#', '');
+    this.$store.dispatch('locationhash/changeHash', location);
+
     this.$fire.databaseReady()
     .then(()=>{
         this.$fire.database.ref().once('value', snapshot => { 
@@ -238,18 +204,28 @@ export default {
         });
     })
   
-  const targer = this.id.map(el => [el, document.querySelector(`#${el}`)]);
+  let target = [];
+  this.id = this.$t('burger.firstpitch.points').map(el=> el.hash);
+  this.id.forEach(el => {
+    const element = document.querySelector(`#${el}`);
+    if (element !== undefined) {
+      target.push([el, document.querySelector(`#${el}`)]);
+    }
+  });
+  console.log(target);
 
   if(process.browser){
-        targer.forEach( (el,index) => {
+        target.forEach( (el,index) => {
+      if(el[1] !== null){
       this.observer[index] = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.intersectionRatio >= 0.6) {
-            this.addHashToLocation(`#${el[0]}`);             
+            this.addHashToLocation(el[0]);             
             }
         });
       },{threshold: [0.25, 0.5, 0.75, 1]});
       this.observer[index].observe(el[1]);
+      }    
     });
   }
 /*

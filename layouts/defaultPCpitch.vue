@@ -10,6 +10,20 @@
             <Nuxt :bitbonprice="bitbonPrice"/>
          </div>
             <div class="loyaut__right-sidebar" :style="styleOfLeftMenu">
+              <h3 class="menu__header">Навигация по презентации</h3>
+              <ul>
+                <li v-for="(el, index) in checkElementIfIs(menu)" :key="index" class="menu__pc-item-container">
+                  <div class="menu__pc-item" :class="el.hash === checkHash ? 'active' : null"
+                     v-scroll-to="{
+                     el:`#${el.hash}`,
+                     offset: -50,
+                     duration: 500,
+                     cancelable: false,
+                     }"
+                  >
+                  {{el.name}}</div>
+                </li>
+              </ul>
             <MobileMenu></MobileMenu>
             </div>
          
@@ -45,6 +59,7 @@ export default {
     styleOfLeftMenu:{
       transform: 'translateY(0)'
     },
+    menu: [],
     tempLeftMenu: 0,
   }),
   methods: {
@@ -62,6 +77,13 @@ export default {
             this.tempLeftMenu = change;
           
       } 
+    },
+    checkElementIfIs(arr){
+      const res = [];
+      arr.forEach(el=>{
+        document.querySelector(`#${el.hash}`) !== null ? res.push(el) : null;
+      })
+      return res;
     }
   },
   beforeMount(){
@@ -77,13 +99,20 @@ export default {
           })
         })
         .catch(err => console.log(err));
-    
+         
+    this.menu = this.$t('burger.firstpitch.points');
+  },
+  computed:{
+    checkHash(){
+      return this.$store.getters['locationhash/getHash'];
+    }
   },
   mounted(){
     this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
     this.$store.dispatch('isMobile/changeIsMobile', this.isMobile)
     window.addEventListener("resize", this.checkIfMobile);
     window.addEventListener('scroll', this.transformY);
+    this.hash = window.location.hash;
     this.transformY();
     
     /*setTimeout(()=>{document.querySelector('#loadcontent').classList.add("hide");}, 3500);
@@ -120,6 +149,7 @@ export default {
 
   .main-pc-black{
      background-color: $backgroundBlack;
+     min-height: 100vh;
   }
 
   .loyaut__right-sidebar{
@@ -127,7 +157,7 @@ export default {
     //top: 50%;
     //right: 50px;
     margin-left: 50px;
-    height: 200px;
+    height: fit-content;
     border-radius: 7px;
     backdrop-filter: blur(3px);
     background-color: #f3f3f3;
@@ -305,7 +335,65 @@ export default {
    opacity: 1;
     }
   
+  .menu__pc-item-container{
+    padding: 8px 11px;
+  }
+  .menu__pc-item{
+    color: $textMenuPC;
+    font-size: .6em;
+    line-height: 1; 
+    margin-right: 17px;
+    margin-left: 17px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
+  .menu__pc-item:hover{
+    opacity: .8;
+  }
 
+  .menu__pc-item:active{
+    opacity: 0.5;
+  }
+
+  .menu__pc-item.active::before{
+    content: '';
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -11px;
+    width: 5px;
+    background-color: #005dff;
+    transition: opacity .3s;
+    transition-delay: .3s; 
+  }
+
+  .menu__pc-item::before{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -11px;
+    width: 5px;
+    background-color: #005dff;
+    transition: opacity .3s;
+  }
+
+  .menu__pc-item-container:last-child{
+    padding-bottom: 25px
+  }
+
+  .menu__header{
+    color: $textMenuPC;
+    line-height: 1.45;
+    font-size: .6em;
+    font-weight: 700;
+    padding: 25px 17px;
+    text-transform: uppercase;
+  }
 
 
   html{
@@ -339,8 +427,8 @@ export default {
     pointer-events: none;
   }
 
-  .menu__container{
-    margin-right: 0;
+  .default-pc__pitch .menu__container{
+    margin-right: 0 !important;
   }
 
   .mobile__menu{

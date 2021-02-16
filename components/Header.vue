@@ -80,8 +80,8 @@ export default {
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(6px);
     position: fixed;
-    top: 0;
-    z-index: 999;
+    top: -1px;
+    z-index: 9999;
   }
 
   .header__container-content{

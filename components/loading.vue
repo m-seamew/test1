@@ -51,8 +51,7 @@ export default {
   },
   mounted(){
     this.$nextTick(()=>{
-      setTimeout(_=>{
-       this.loading = false}, 500);
+      setTimeout(_=>{this.loading = false}, 500);
       setTimeout(_=>{this.loadingAnimation = false}, 200);
     })
   }

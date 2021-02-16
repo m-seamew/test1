@@ -27,6 +27,13 @@ export default {
     bitbonPrice: 0,
     isMobile: true,
   }),
+  head(){
+    return {
+      meta: [
+        { name: 'viewport', content: 'width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;'},
+      ],
+    }
+  },
   methods: {
     checkIfMobile(){
       this.isMobile = document.documentElement.clientWidth > 770 ? false : true;

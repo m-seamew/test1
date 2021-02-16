@@ -45,16 +45,24 @@ export default {
     firstpitch: {
       points: [
         {
-          name: 'Название 1',
-          hash: 'test1'
+          name: 'Начало',
+          hash: 'start'
         },
         {
-          name: 'Название 2',
-          hash: 'test2'
+          name: 'IPO',
+          hash: 'ipo'
         },
         {
-          name: 'Название 3',
-          hash: 'test3'
+          name: 'Фондирование',
+          hash: 'fondirovanie'
+        },
+        {
+          name: 'О Системе Битбон',
+          hash: 'o-sisteme'
+        },
+        {
+          name: 'О токене Битбон',
+          hash: 'token-bitbon'
         },
       ]
     }
