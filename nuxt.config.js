@@ -41,11 +41,11 @@ export default {
   plugins: [
     '~plugins/app-components.js', 
     '~plugins/vue-carousel.js',
+    '~/plugins/vue-lazyload',
     { src: '~plugins/vueLottie.js', mode: 'client'},
     { src: '~plugins/preloader-typer.js', mode: 'client'},
     { src: './plugins/flickity.js', ssr: false},
     { src: './plugins/videoplayer.js', mode: 'client' },
-    '~/plugins/vue-lazyload'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
