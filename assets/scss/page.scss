@@ -2,6 +2,10 @@ body{
   font-weight: 400;
 }
 
+html{
+  box-sizing: border-box;
+}
+
 .bold{
   font-weight: 700;
 }
@@ -165,3 +169,11 @@ img[lazy=loaded] {
   opacity: 1;
   transition: opacity .5s;
 }
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {    
+	*, body {
+	      -webkit-font-smoothing: antialiased;
+	}      
+}
+
