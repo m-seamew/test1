@@ -39,6 +39,13 @@ export default {
       //marginBottom: 'Min(50px, 10%)',
     }
   }),
+  head(){
+    return {
+      meta: [
+        { name: 'viewport', content: 'width=device-width; initial-scale=1.0'},
+      ],
+    }
+  },
   methods: {
     checkIfMobile(){
       this.isMobile = document.documentElement.clientWidth > 770 ? false : true;
