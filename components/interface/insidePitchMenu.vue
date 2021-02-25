@@ -3,7 +3,7 @@
     <article class="">
       <header class="contact__header contact__container">
         <div class="contact__logo-container">
-          <img :src="require('~/assets/img/preloader/preloader__logo.svg')" alt="Bitbon Expert Logo" class="img"> 
+          <img src="/preloader__logo.svg" alt="Bitbon Expert Logo" class="img"> 
         </div>
         <div class="contact__logo-text">
           {{$t('contact.logo_text')}}
@@ -17,7 +17,9 @@
           :style="checkIsActive(el.slug) ? createActiveStyles(el.bg_active) : null"
           @mouseenter="changeActive(el, index)"
           @mouseleave="fixActive(index)">
-                <a class="footer__link" :href="el.link"></a>
+              <Prefetch v-bind:url="el.link">
+                <NuxtLink class="footer__link" :to="el.link"></NuxtLink>
+              </Prefetch> 
                 <div class="inside-menu__slide-item">
                   <div class="footer__img-container inside-menu__img-container">
                     <img :src='require(`~/assets/img/footer/${el.img}`)' alt="menu point" width="90px" height="90px">

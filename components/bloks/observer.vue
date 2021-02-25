@@ -9,7 +9,7 @@ export default {
   }),
   mounted() {
     const options = {
-    rootMargin: "0px",
+    rootMargin: "-100px",
     threshold: [0, 0.25, 0.5, 0.75, 1]
     };
     
@@ -28,3 +28,15 @@ export default {
   }
 }
 </script>
+
+
+<style>
+  .observer{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    pointer-events: none;
+  }
+</style>

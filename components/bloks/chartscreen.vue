@@ -13,11 +13,9 @@
     </client-only>
 
     <div class="chart-container">
-      <img v-lazy="require(`~/assets/img/${$t('chart_screen.chart')}`)"
-           src="~/assets/img/lazyloading.svg"
-           alt="chart"
-           class="img chart"
-      >
+      <LazyHydrate :when-visible="lazyOption">
+        <Chart/>
+      </LazyHydrate>
     </div>
     <div class="main__container">
       <Subnotes :text="$t('chart_screen.subnotes')" :MaxWidth="60"></Subnotes>
@@ -27,11 +25,16 @@
 
 <script>
 //import { Chart } from "frappe-charts/dist/frappe-charts.min.esm"
+  import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
-  data: ()=>({
-    chart: {},
-  }),
+  components: {
+    LazyHydrate,
+    Chart: () => import('~/components/bloks/svg/chart'),
+  },
+  data: () => ({
+    lazyOption: { rootMargin: '0px' },
+  })
 }
 </script>
 
@@ -61,9 +64,10 @@ export default {
     .chart-container{
     pointer-events: auto;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     overflow-x: scroll ;
-    direction: rtl;
+    overflow-y: hidden;
+    //direction: rtl;
     -ms-overflow-style: none;  /* IE 10+ */
     scrollbar-width: none;
     }

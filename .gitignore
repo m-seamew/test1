@@ -88,3 +88,15 @@ sw.*
 
 # Vim swap files
 *.swp
+# XDN generated build directory
+.xdn
+# XDN generated build directory
+.xdn
+# XDN generated build directory
+.xdn
+# XDN generated build directory
+.xdn
+# XDN generated build directory
+.xdn
+# XDN generated build directory
+.xdn

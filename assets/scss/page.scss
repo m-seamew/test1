@@ -10,6 +10,10 @@ html{
   font-weight: 700;
 }
 
+.regular{
+  font-weight: 400;
+}
+
 .link-help{
   color: #005dff;
   font-weight: 700;
@@ -177,3 +181,16 @@ img[lazy=loaded] {
 	}      
 }
 
+
+@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .pitches__container--mobile{
+    margin: 0 auto !important;
+  }
+
+  .blok-wrapper-horizontal{
+    height: auto !important;
+    width: 98vw !important;
+    padding-bottom: 20px !important;
+  }
+}

@@ -173,6 +173,9 @@ export default {
     transition: transform .75s ease-in-out;
     transition-delay: .25s;
     //z-index: 999;
+    .menu__button--bitbon:before {
+    line-height: 56px;
+    }
   }
 
   .loyaut__left-sidebar{

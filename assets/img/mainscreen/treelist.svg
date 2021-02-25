@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144.727" height="125.307" viewBox="0 0 144.727 125.307">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="Сгруппировать_30" transform="translate(-351.706 -641.097)">
+        <path id="Контур_1" d="M96.73 111.67a83.5 83.5 0 0 1 72.364 41.766A83.518 83.518 0 0 1 96.73 111.67z" class="cls-1" transform="translate(327.34 612.967)"/>
+        <path id="Контур_2" d="M92.967 0a83.63 83.63 0 0 1 0 83.533 83.63 83.63 0 0 1 0-83.533z" class="cls-1" transform="translate(331.103 641.097)"/>
+        <path id="Контур_3" d="M72.364 111.67A83.51 83.51 0 0 1 0 153.436a83.5 83.5 0 0 1 72.364-41.766z" class="cls-1" transform="translate(351.706 612.967)"/>
+    </g>
+</svg>

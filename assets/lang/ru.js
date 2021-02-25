@@ -15,25 +15,25 @@ export default {
       {
         img: 'slide1.jpg',
         text: 'Обзор проекта Система Bitbon',
-        link: '/firstpitch',
+        link: '/firstpitch2',
         slug: '/firstpitch2',
         bg_active: [ '#5b3f70', '#27133e']
       },
       {
         img: 'slide1.jpg',
         text: 'Обзор проекта Система Bitbon',
-        link: '/firstpitch',
+        link: '/firstpitch3',
         slug: '/firstpitch3',
         bg_active: ['#848a98', '#333540']
       },
       {
         img: 'slide1.jpg',
         text: 'Обзор проекта Система Bitbon',
-        link: '/firstpitch',
-        slug: '/firstpitch3',
+        link: '/firstpitch4',
+        slug: '/firstpitch4',
         bg_active: ['#989784', '#404033']
       },
-    ]
+    ],
   },
 
   preloader: {

@@ -6,7 +6,7 @@
     ]"
     class="blok-wrapper">
 
-    <header>
+    <header v-if="!poster">
       <div class="blok-header">
         <div class="blok-header__number">{{$t('blok_template.slide_number') + ' ' + slide_id}}</div>
         <div class="blok-header__author">
@@ -67,6 +67,11 @@ export default {
       type: Boolean,
       required: false,
       default: true,
+    },
+    poster:{
+      type: Boolean,
+      required: false,
+      default: false,
     }
 
   },
@@ -356,18 +361,28 @@ export default {
       font-size: calc(13px + (14 + 14 * 0.7) * ((100vh - 570px) / 1080)) !important;
     }
   }
- //for block labdscape position on phones. Needed the tests.
+
+
+ //for block labdscape position on phones. Needed the tests. 
+ /*
   @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
-    html {
+
+       .pitches__container--mobile{
+         margin: 0 auto;
+       }
+  }
+    /*html {
       transform: rotate(-90deg);
       transform-origin: left top;
-      width: 100vh;
+      width: 100vh;.
       overflow-x: hidden;
       position: absolute;
       top: 100%;
       left: 0;
     }
   } 
+*/
+
    @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     .blok-wrapper-horizontal{
       font-size: Max(13px, calc(13px + (14 + 14 * 0.7) * ((100vh - 320px) / 1080))) !important;

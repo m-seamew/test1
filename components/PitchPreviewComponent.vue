@@ -1,6 +1,7 @@
 <template>
   <section class="preview">
-    <NuxtLink :to="data.link">
+    <Prefetch v-bind:url="data.link">
+      <NuxtLink :to="data.link">
     <div class="preview__img-container">
       <img :src="require(`~/assets/img/pitchpreview/${data.img}`)" alt="preview" class="img">
     </div>
@@ -55,6 +56,7 @@
         </div>   
     </div>
     </NuxtLink>
+  </Prefetch>
   </section>
 </template>
 

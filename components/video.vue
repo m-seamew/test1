@@ -10,7 +10,7 @@
           >
           <source v-for="(el, index) in source" :key="index"
             :size="el.size"
-            :src="require(`~/assets/video/${el.source}`)"
+            src="https://www.youtube.com/watch?v=LO_VEv1wFio&ab_channel=Columnsl"
             :type="el.type"  
           /> 
         </video>

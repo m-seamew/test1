@@ -1,14 +1,18 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
+    "xdn": "xdn",
+    "xdn:dev": "xdn dev",
+    "xdn:build": "xdn build",
+    "xdn:deploy": "xdn deploy",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build"
   },
+  "name": "bitbon.expert",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "@nuxtjs/firebase": "^7.4.1",
     "animated-number-vue": "^1.0.0",
@@ -46,6 +50,7 @@
     "sass-resources-loader": "^2.1.1",
     "sharp": "^0.27.1",
     "sqip-loader": "^1.0.0",
-    "webp-loader": "^0.6.0"
+    "webp-loader": "^0.6.0",
+    "pngquant-bin": "^3.1.1"
   }
 }

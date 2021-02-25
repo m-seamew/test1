@@ -7,7 +7,7 @@
           src="~/assets/img/lazyloading.svg"
           class="bg-icon plan__bg-icon"
         >
-        <Observer @firstobserve="animation"></Observer>
+        <ObserverRecall @firstobserve="animation" @animationstop="animationStop" @nextobserve="animationReplay"></ObserverRecall>
     </client-only>
     <main class="main__container plan__main-container">
       <div>
@@ -44,10 +44,12 @@
     import vueLottie from 'vue-lottie-ssr/src/components/vue-lottie.vue';
     import animationData from '~/assets/img/tick.json';
     import animationData2 from '~/assets/img/round.json';
+    import ObserverRecall from '~/components/bloks/observerRecall';
     
 export default {
    components: {
-      vueLottie
+      vueLottie,
+      ObserverRecall
    },
   data () {
      return {
@@ -69,6 +71,16 @@ export default {
          setTimeout(() => {this.$refs.lottie[i].play()}, 150 * i);
         }
       }, 300);
+    },
+    animationStop(){
+      for(let i = 0; i < this.$refs.lottie.length; i++){
+        this.$refs.lottie[i].loop === true ? this.$refs.lottie[i].stop() : null;
+      }
+    },
+     animationReplay(){
+      for(let i = 0; i < this.$refs.lottie.length; i++){
+        this.$refs.lottie[i].loop === true ? this.$refs.lottie[i].play() : null;
+      }
     }
    },
 }

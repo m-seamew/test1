@@ -4,6 +4,12 @@
 
     <div id="start">
       <LazyHydrate when-idle>
+        <MainScreen/>
+      </LazyHydrate>
+    </div>
+
+    <div id="table">
+      <LazyHydrate when-idle>
         <TableBlok/>
       </LazyHydrate>
     </div>
@@ -109,9 +115,15 @@
     </div>
 
 
-     <div>
+    <div>
       <LazyHydrate :when-visible="lazyOption">
         <Potential></Potential>
+      </LazyHydrate>
+    </div>
+
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Potential2></Potential2>
       </LazyHydrate>
     </div>
 
@@ -183,6 +195,8 @@ export default {
     Plan1:           () => import('~/components/bloks/plan1'),
     Plan2:           () => import('~/components/bloks/plan2'),
     Potential:       () => import('~/components/bloks/potential'),
+    Potential2:       () => import('~/components/bloks/potential2'),
+    MainScreen:      () => import('~/components/bloks/mainscreen'),
   },
   methods: {
     addHashToLocation(hash) {
@@ -250,8 +264,10 @@ export default {
 }
 
 </script>
-
+  
 <style>
-
+  .container > div:not(:last-child){
+    margin-bottom: 1%;
+  }
 </style>
 

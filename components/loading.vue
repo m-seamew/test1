@@ -6,7 +6,7 @@
     ]">
     <div class="preloader__container">
       <div class="preloader__logo">
-         <img :src="require('~/assets/img/preloader/preloader__logo.svg')" alt="Bitbon Expert" class="preloader__img">
+         <img src="/preloader__logo.svg" alt="Bitbon Expert" class="preloader__img">
       </div>
       <div class="preloader__subtitle">
         {{$t('preloader.subtitle')}}

@@ -162,7 +162,21 @@ export default {
     }
   },
 
+  render: {
+    // HTTP2: https://nuxtjs.org/api/configuration-render/#http2
+    http2: {
+      push: true,
+      pushAssets: () => {
+        const assetsToPush = ['</preloader__logo.svg>; rel=preload; as=image']
+        return assetsToPush
+      }
+    }
+  },
+
   build: {
+    terser: {
+      extractComments: false 
+    },
     splitChunks: {
       layouts: true
     },
@@ -173,7 +187,6 @@ export default {
         minifyCSS: false,
         minifyJS: false,
     }
-  },
-  //router: { middleware: ['cusstomroutes'] },
   }
+  },
 }
