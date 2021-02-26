@@ -17,9 +17,7 @@
           :style="checkIsActive(el.slug) ? createActiveStyles(el.bg_active) : null"
           @mouseenter="changeActive(el, index)"
           @mouseleave="fixActive(index)">
-              <Prefetch v-bind:url="el.link">
-                <NuxtLink class="footer__link" :to="el.link"></NuxtLink>
-              </Prefetch> 
+                <NuxtLink class="footer__link" :to="el.link"></NuxtLink> 
                 <div class="inside-menu__slide-item">
                   <div class="footer__img-container inside-menu__img-container">
                     <img :src='require(`~/assets/img/footer/${el.img}`)' alt="menu point" width="90px" height="90px">
