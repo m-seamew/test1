@@ -15,7 +15,6 @@ Vue.component('Blok', Blok);
 Vue.component('Burger', Burger);
 Vue.component('Contacts', Contacts);
 Vue.component('InsidePitchMenu', insidePitchMenu);
-Vue.component('Prefetch', Prefetch);
 
 
 
