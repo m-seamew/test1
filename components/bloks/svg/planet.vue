@@ -1,5 +1,5 @@
 <template>
-  <div id="planet__svg" class="planet-svg__container" :class="focus ? 'active' : null">
+  <div id="planet__svg" class="planet-svg__container" :class="isFocus">
     <div class="counter-wrapper">
       <div class="counter" data-max="542" data-used="542">
         <svg
@@ -131,6 +131,11 @@ export default {
       });
     }
   },
+  computed:{
+    isFocus(){
+      return this.focus ? 'active' : null;
+    }
+  },
   mounted(){
     this.animationStart();
   }
@@ -145,7 +150,8 @@ export default {
   justify-content: center;
   max-width: 300px;
   max-height: 300px;
-  margin-top: 200px;
+  //margin-top: 200px;
+  width: inherit;
   font-size: 16px !important;
 }
 

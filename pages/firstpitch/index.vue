@@ -127,6 +127,12 @@
       </LazyHydrate>
     </div>
 
+    <div>
+      <LazyHydrate :when-visible="lazyOption">
+        <Potential3></Potential3>
+      </LazyHydrate>
+    </div>
+
 
     <div id="test3">
       <LazyHydrate :when-visible="lazyOption">
@@ -196,6 +202,7 @@ export default {
     Plan2:           () => import('~/components/bloks/plan2'),
     Potential:       () => import('~/components/bloks/potential'),
     Potential2:       () => import('~/components/bloks/potential2'),
+    Potential3:       () => import('~/components/bloks/potential3'),
     MainScreen:      () => import('~/components/bloks/mainscreen'),
   },
   methods: {
