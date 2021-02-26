@@ -1,14 +1,9 @@
 {
   "scripts": {
-    "xdn": "xdn",
-    "xdn:dev": "xdn dev",
-    "xdn:build": "xdn build",
-    "xdn:deploy": "xdn deploy",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build"
   },
   "name": "bitbon.expert",
   "version": "1.0.0",
